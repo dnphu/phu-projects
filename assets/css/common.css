@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root{
+  --red:    #db1951;  
+  --yellow: #fcde4e;
+  --green:  #004b23;
+
+  --neutral-extra-dark:rgba(34, 36, 40, 1);
+  --neutral-dark:#4b4b4b;
+  --neutral-medium:#888888;
+  --neutral-light:#ececec;
+  --neutral-extra-light:#f6f6f6;
+  --neutral-white:#ffffff;
+
+  --font-body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  --font-heading:'Inter',var(--font-body); 
+  --font-logo:'Poppins',var(--font-body);
+
+}
+
+body{ margin:0; font-family:var(--font-body); line-height:1.5 }
+img{ max-width:100%; height:auto; display:block }
+
+h1,h2,h3,h4,h5,h6{
+  font-family:var(--font-heading);
+}
+h1{font-size:56px;line-height:64px}
+h2{font-size:48px;line-height:56px}
+h3{font-size:40px;line-height:44px}
+h4{font-size:32px;line-height:36px}
+h5{font-size:24px;line-height:28px}
+h6{font-size:20px;line-height:24px}
+
+:root {
+  --text-large: 20px/28px var(--font-body);
+  --text-medium: 18px/24px var(--font-body);
+  --text-normal: 16px/20px var(--font-body);
+  --text-small: 14px/20px var(--font-body);
+}
+
+:root{
+  --btn-default: rgba(34, 36, 40, 1); 
+  --btn-hover:   rgba(0, 0, 0, 1);  
+  --btn-active:  rgba(136, 136, 136, 1); 
+  --btn-disabled: rgba(236, 236, 236, 1);  
+}
