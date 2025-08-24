@@ -22,7 +22,7 @@
             </form>
             <div class="menu">
                 <a class="menu-item facebook" href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-                <a class="menu-item ins" href="#"><img src="assets/icons/instagram.svg" alt="Twitter"></a>
+                <a class="menu-item instagram" href="#"><img src="assets/icons/instagram.svg" alt="Twitter"></a>
                 <a class="menu-item text" href="#"><img src="assets/icons/user-group.svg" alt="">Beautizon Community</a>
                 <a class="menu-item text" href="#"><img src="assets/icons/user-circle.svg" alt="">Đăng nhập</a>
                 <button class="menu-item btn-icon heart"><img src="assets/icons/menu item heart.svg" alt="Icon" class="icon"></button>
@@ -30,39 +30,42 @@
             </div>
             <span class="menu-item lang"><img src="assets/icons/VNflag.png" alt="">VN</span>
         </div>
-        <nav class="header-nav">
-            <ul class="nav-list">
-                <li><a href="#">Sản phẩm mới</a></li>
-                <li><a href="#">Thương hiệu</a></li>
-                <li><a href="#">Son môi</a></li>
-                <li><a href="#">Chăm sóc da</a></li>
-                <li><a href="#">Dành cho nam</a></li>
-                <li><a href="#">Chăm sóc tóc</a></li>
-                <li><a href="#">Toàn thân</a></li>
-                <li><a href="#">Sản phẩm tre</a></li>
-                <li><a href="#">Bộ sưu tập Beautizon</a></li>
-                <li><a href="#">Giảm giá & Khuyến mãi</a></li>
-            </ul>
-        </nav>
-        <div class="promo-banner">
+    </header>
+    <nav class="header-nav">
+        <ul class="nav-list">
+            <li><a href="#">Sản phẩm mới</a></li>
+            <li><a href="#">Thương hiệu</a></li>
+            <li><a href="#">Son môi</a></li>
+            <li><a href="#">Chăm sóc da</a></li>
+            <li><a href="#">Dành cho nam</a></li>
+            <li><a href="#">Chăm sóc tóc</a></li>
+            <li><a href="#">Toàn thân</a></li>
+            <li><a href="#">Sản phẩm tre</a></li>
+            <li><a href="#">Bộ sưu tập Beautizon</a></li>
+            <li><a href="#">Giảm giá & Khuyến mãi</a></li>
+        </ul>
+    </nav>
+    <div class="promo-banner">
         <p>
             Banner giới thiệu khuyến mãi.&nbsp;<a href="#">Link xem chi tiết</a>
         </p>
-        </div>
-    </header>
+    </div>
     <div class="content"> 
         <div class="top-banner">
-            <button class="arrow left"><</button>
-            <img src="assets/images/Top banner.png"/>
+            <button class="arrow left"><i class="fa-solid fa-angle-left"></i></button>
+            <picture>
+                <source media="(max-width: 375px)" srcset="assets/images/top-banner-mobile.png" />
+                <img src="assets/images/top-banner.png"/>
+            </picture>
             <button class="buy-now">Mua ngay</button>
-            <button class="arrow right">></button>
+            <button class="arrow right"><i class="fa-solid fa-angle-right"></i></button>           
         </div>
-        <section class="best-sellers">
+        <section class="product-slider">
             <h3>Best Sellers</h3>
             <div class="swiper product-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assets/images/product photo.png" alt="Product 1">
+                        <img src="assets/images/product photo.png" alt="Product">
                         <div class="product-info">
                             <p class="label">Tên sản phẩm</p>
                             <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
@@ -71,7 +74,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <img src="assets/images/product photo.png" alt="Product 1">
+                        <img src="assets/images/product photo.png" alt="Product">
                         <div class="product-info">
                             <p class="label">Tên sản phẩm</p>
                             <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
@@ -80,7 +83,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <img src="assets/images/product photo.png" alt="Product 1">
+                        <img src="assets/images/product photo.png" alt="Product">
                         <div class="product-info">
                             <p class="label">Tên sản phẩm</p>
                             <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
@@ -89,7 +92,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <img src="assets/images/product photo.png" alt="Product 1">
+                        <img src="assets/images/product photo.png" alt="Product">
                         <div class="product-info">
                             <p class="label">Tên sản phẩm</p>
                             <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
@@ -98,7 +101,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <img src="assets/images/product photo.png" alt="Product 1">
+                        <img src="assets/images/product photo.png" alt="Product">
                         <div class="product-info">
                             <p class="label">Tên sản phẩm</p>
                             <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
@@ -106,49 +109,342 @@
                         <button class="quick-view">QICK VIEW</button>
                     </div>
 
-                </div>   
+                </div>
+                <div class="swiper-pagination"></div>   
             </div>
             <button class="swiper-btn prev"><i class="fa-solid fa-angle-left"></i></button>
             <button class="swiper-btn next"><i class="fa-solid fa-angle-right"></i></button>  
         </section>
-        <section class="benefits">
-            <div class="benefit-promo">
-                <div class="benefit-bar">
-                    <div class="benefit-item">
-                        <img src="assets/icons/Shippng_icon.png">
-                        <p>Free shipping for order 199,000 +</p>
-                    </div>
+        <section class="benefit">
+            <div class="benefit-bar">
+                <div class="benefit-item">
+                    <img src="assets/icons/Shippng_icon.png">
+                    <p>Free shipping for order 199,000 +</p>
+                </div>
 
-                    <div class="benefit-item">
-                        <img src="assets/icons/offer_icon.png">
-                        <p>Exclusive offer</p>
-                    </div>
+                <div class="benefit-item">
+                    <img src="assets/icons/offer_icon.png">
+                    <p>Exclusive offer</p>
+                </div>
 
-                    <div class="benefit-item">
-                        <img src="assets/icons/box_icon.png">
-                        <p>Gift box</p>
-                    </div>
+                <div class="benefit-item">
+                    <img src="assets/icons/box_icon.png">
+                    <p>Gift box</p>
+                </div>
 
-                    <div class="benefit-item">
-                        <img src="assets/icons/samples_icon.png">
-                        <p>Samples</p>
-                    </div>
-                </div> 
-            </div> 
+                <div class="benefit-item">
+                    <img src="assets/icons/samples_icon.png">
+                    <p>Samples</p>
+                </div>
+            </div>  
 
             <div class="benefit-banner">
                 <div class="banner-bar">
                     <img src="assets/images/banner promo gift.png" alt="Benefit Banner">
-                    <p>Gift Finder</p>
+                    <h4>Gift Finder</h4>
                 </div>
 
                 <div class="banner-bar">
                     <img src="assets/images/banner promo sets.png" alt="Benefit Banner">
-                    <p>Value Sets</p>
+                    <h4>Value Sets</h4>
+                </div>
             </div>
         </section>
+        <section class="product-slider">
+            <h3>New Arrivals</h3>
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>   
+            </div>
+            <button class="swiper-btn prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="swiper-btn next"><i class="fa-solid fa-angle-right"></i></button>  
+        </section>
+        <section class="product-slider">
+            <h3>Flash Sales</h3>
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="quick-view">QICK VIEW</button>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>   
+            </div>
+            <button class="swiper-btn prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="swiper-btn next"><i class="fa-solid fa-angle-right"></i></button>  
+        </section>
+        <section class="product-slider offers">
+            <h3>Natural Beauty Offers</h3>
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="product-btn">Button</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="product-btn">Button</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="product-btn">Button</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="product-btn">Button</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/images/product photo.png" alt="Product">
+                        <div class="product-info">
+                            <p class="label">Tên sản phẩm</p>
+                            <p class="description">Đoạn thông tin mô tả ngắn về sản phẩm</p>
+                        </div>
+                        <button class="product-btn">Button</button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>   
+            </div>
+            <button class="swiper-btn prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="swiper-btn next"><i class="fa-solid fa-angle-right"></i></button>  
+        </section>
+
+        <section class="experts">
+            <h3>Recommended by Experts</h3>
+            <div class="expert-list">
+                <img src="assets/images/experts.png" alt="">
+                <img src="assets/images/experts.png" alt="">
+                <img src="assets/images/experts.png" alt="">
+                <img src="assets/images/experts.png" alt="">
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Về Beautizon</a></li>
+                        <li><a href="#">Chính sách mua hàng</a></li>
+                        <li><a href="#">Điều khoản chung</a></li>
+                        <li><a href="#">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a href="#">Đường dây nóng</a></li>
+                        <li><a href="#">Natural Beauty Community</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-company">
+                    <span class="value">THÔNG TIN DOANH NGHIỆP</span>
+                    <p>
+                        <span class="label">Tên doanh nghiệp:</span>
+                        <span class="value">CÔNG TY TRÁCH NHIỆM HỮU HẠN MỘT THÀNH VIÊN BEAUTIZON</span>
+                    </p>
+                    <p>
+                        <span class="label">Mã số thuế:</span>
+                        <span class="value">0401837148 cấp bởi Sở Kế Hoạch và Đầu Tư Thành phố Đà Nẵng ngày 15 tháng 06 năm 2017</span>
+                    </p>
+                    <p>
+                        <span class="label">Địa chỉ:</span>
+                        <span class="value">168 Phan Đăng Lưu, Phường Hoà Cường Bắc, Quận Hải Châu, Đà Nẵng, Việt Nam</span>
+                    </p>
+
+                </div>
+
+                <div class="footer-subscribe">
+                    <span class="label">ĐĂNG KÝ NHẬN TIN</span>
+                    <span class="value">Để nhận những thông tin khuyến mãi đầy hấp dẫn từ chúng tôi</span>
+
+                    <form class="subscribe-form" onsubmit="return false;">
+                        <input type="email" placeholder="Địa chỉ email của bạn">
+                        <button type="submit">Đăng ký</button>
+                    </form>
+
+                    <div class="socials">
+                        <span>Theo dõi chúng tôi trên</span>
+                        <div class="icons">
+                        <a href=""><img src="assets/icons/facebook.png" alt=""></a>
+                        <a href=""><img src="assets/icons/instagram.png" alt=""></a>
+                        <a href=""><img src="assets/icons/tiktok.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright 2021. Beautizon. Designed and Developed by Xenia Tech</p>
+        </footer>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <nav class="mobile-tabbar">
+        <a class="tab-item-js is-active" href="#">
+            <span class="icon-wrap">
+                <img src="assets/icons/home.svg" alt="Home" class="icon-default">
+                <img src="assets/icons/home-active.svg" alt="Home Active" class="icon-active">
+            </span>
+            <span>Home</span>
+        </a>
+
+        <a class="tab-item-js" href="#">
+            <span class="icon-wrap">
+                <img src="assets/icons/shopping-bag.svg" alt="Shop" class="icon-default">
+                <img src="assets/icons/shopping-bag-active.svg" alt="Shop Active" class="icon-active">
+            </span>
+            <span>Shop</span>
+        </a>
+
+        <a class="tab-item-js" href="#">
+            <span class="icon-wrap">
+                <img src="assets/icons/tag.svg" alt="Offers" class="icon-default">
+                <img src="assets/icons/tag-active.svg" alt="Offers Active" class="icon-active">
+            </span>
+            <span>Offers</span>
+        </a>
+
+        <a class="tab-item-js" href="#">
+            <span class="icon-wrap">
+                <img src="assets/icons/user-group.svg" alt="Community" class="icon-default">
+                <img src="assets/icons/user-group.svg" alt="Community Active" class="icon-active">
+            </span>
+            <span>Community</span>
+        </a>
+
+        <a class="tab-item-js" href="#">
+            <span class="icon-wrap">
+                <img src="assets/icons/user-circle.svg" alt="Me" class="icon-default">
+                <img src="assets/icons/user-circle-active.svg" alt="Me Active" class="icon-active">
+            </span>
+            <span>Me</span>
+        </a>
+        </nav>
+    <div class="popup-overlay-js"></div>
+
+    <div class="popup-modal-js">        
+        <div class="popup-inner-js">
+            <button class="popup-close-js"><img src="assets/icons/close-popup.svg" alt="Close"></button>
+            <div class="popup-left-js">
+                <h4>Hi, Natural Beauty ;)</h4>
+                <p>Subscribe to receive gift from us on every order.</p>
+
+                <form class="popup-form-js">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="popup-note-js">
+                    By clicking “Join Now” you acknowledge that you are agree to Beautizon’s 
+                    <span class="highlight-red">Privacy Policy, Terms of Use</span>, and to automatically receive Beautizon offers and notifications via email.
+                </p>                
+            </div>
+
+            <div class="popup-right-js">
+                <img src="assets/images/popup-banner.png" alt="Popup Banner">
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

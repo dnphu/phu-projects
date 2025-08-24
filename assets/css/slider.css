@@ -1,0 +1,190 @@
+
+.product-slider {
+  max-width: 1162px;
+  width: 100%;
+  height: 390px;
+  margin: 80px auto;
+  padding: 0 16px;
+  position: relative;
+}
+.product-slider h3 {
+  text-align: center;
+  margin: 0 0 22px;
+  font-weight: 600;
+}
+.swiper.product-swiper {
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+  padding: 8px;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.swiper-slide {
+  width: 256px;
+  height: 314px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-white);
+  position: relative;
+  overflow: visible;
+}
+.quick-view {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  white-space: nowrap;
+  border-radius: 22px;
+  border: none;
+  background-color: var(--red);
+  color: var(--neutral-white);
+  font: var(--text-large);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .2s ease, transform .2s ease;
+  cursor: pointer;
+}
+.swiper-slide:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  z-index: 3;
+}
+.swiper-slide:hover .quick-view {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -15%) scale(1.04);
+}
+.swiper-btn {
+  position: absolute;
+  top: 48%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: var(--neutral-white);
+  border: 1px solid rgba(0,0,0,1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,1);
+  font-size: 13px;
+}
+.swiper-btn i { position: relative; top: 1px; }
+.swiper-btn.prev { left: 0; }
+.swiper-btn.next { right: 0; }
+.swiper-btn:hover { background: var(--neutral-extra-light); }
+.swiper-btn.swiper-button-disabled {
+  background-color: var(--neutral-white);
+  cursor: not-allowed;
+  pointer-events: none;
+  border: 1px solid rgba(226,226,226,1);
+  color: rgba(226,226,226,1);
+  font-size: 13px;
+}
+.product-slider.offers {
+  height: 438px;     
+}
+.product-slider.offers .swiper-slide {
+  height: auto;               
+  padding-bottom: 16px;        
+}
+.product-slider.offers .product-btn {
+  margin: auto;           
+  width: fit-content;
+  align-self: center;
+  padding: 6px 32px;
+  border: 1px solid var(--neutral-black);
+  border-radius: 19px;
+  background: var(--neutral-white);
+  color: rgba(0,0,0,1);
+  font: var(--text-small);
+  font-weight: 600;
+  cursor: pointer;
+}
+.product-slider.offers .product-btn:hover {
+  background: var(--neutral-extra-light);
+  color: rgba(0,0,0,1);
+}
+@media (max-width: 1150px) and (min-width: 376px) {
+  .product-slider {
+    max-width: 900px;
+    margin: 40px auto;
+  }
+}
+@media (max-width: 375px) {
+  section.product-slider {       
+    height: 288px;
+    width: 90%;
+    margin: 48px auto;
+    padding: 0;   
+  }
+  .product-slider h3{
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height:28px;
+    padding-left: 4px;
+  }
+  .swiper.product-swiper {
+    margin: 4px;
+    padding: 0;
+  }
+ .swiper-wrapper {
+    margin: 0;
+  }
+  .product-slider .swiper-slide {
+    width: 156px !important;
+    height: 100%;
+    padding: 0;
+    margin-right: 16px !important;
+  }
+  .product-slider .swiper-slide img{
+    width: 156px;
+    height: 128px;
+    display: block;
+  }
+  .product-slider .product-info{ 
+    margin-top: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .product-slider .swiper.product-swiper { gap: 16px; }
+  .product-slider .quick-view,
+  .product-slider .swiper-btn { display: none; }
+  .product-slider .swiper-pagination { position: static; margin-top: 10px; }
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-slider .swiper-pagination-bullet{
+    width: 9px;
+    height: 9px;
+    background: var(--neutral-light);
+    opacity: 1;
+  }
+  .product-slider.offers {
+    height: 323px;
+  }
+  .product-slider.offers .product-btn {
+    width: 96px;
+    height: 24px;
+    padding: 0;
+    margin-top: 4px;
+  }
+  .product-slider.offers .swiper-pagination {
+    margin: 0;
+  }
+  .product-slider .swiper-pagination-bullet-active{ background: var(--neutral-black); }
+}
