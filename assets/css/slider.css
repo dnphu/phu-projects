@@ -2,7 +2,7 @@
 .product-slider {
   max-width: 1162px;
   width: 100%;
-  height: 390px;
+  height: auto;
   margin: 80px auto;
   padding: 0 16px;
   position: relative;
@@ -24,8 +24,8 @@
   justify-content: flex-start;
 }
 .swiper-slide {
-  width: 256px;
-  height: 314px;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   background-color: var(--neutral-white);
@@ -115,15 +115,14 @@
   background: var(--neutral-extra-light);
   color: rgba(0,0,0,1);
 }
-@media (max-width: 1150px) and (min-width: 376px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .product-slider {
     max-width: 900px;
     margin: 40px auto;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   section.product-slider {       
-    height: 288px;
     width: 90%;
     margin: 48px auto;
     padding: 0;   
@@ -137,21 +136,19 @@
     padding-left: 4px;
   }
   .swiper.product-swiper {
-    margin: 4px;
+    margin: 6px;
     padding: 0;
   }
  .swiper-wrapper {
     margin: 0;
   }
   .product-slider .swiper-slide {
-    width: 156px !important;
     height: 100%;
     padding: 0;
-    margin-right: 16px !important;
   }
   .product-slider .swiper-slide img{
-    width: 156px;
-    height: 128px;
+    width: 100%;
+    height: auto;
     display: block;
   }
   .product-slider .product-info{ 
@@ -175,7 +172,7 @@
     opacity: 1;
   }
   .product-slider.offers {
-    height: 323px;
+    height: auto;
   }
   .product-slider.offers .product-btn {
     width: 96px;

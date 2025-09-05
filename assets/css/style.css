@@ -21,6 +21,7 @@
   gap: 29px;
 }
 .header-bar .logo {
+  flex-shrink: 0;
   width: 132px;
   height: 40px;
 }
@@ -75,6 +76,7 @@
   text-decoration: none;
 }
 .btn-icon {
+  flex-shrink: 0;
   border-radius:9999px;
   background:transparent;
   border:1px solid transparent;
@@ -389,10 +391,12 @@
   overflow: hidden;
   border: 1px solid var(--neutral-white);
   border-radius: 8px;
+  max-width: 375px;
 }
 .subscribe-form input {
   flex: 1;
   height: 40px;
+  min-width: 100px;
   border: none;
   background-color: var(--neutral-black);
   color: var(--neutral-white);
@@ -403,6 +407,7 @@
 }
 
 .subscribe-form button {
+  flex-shrink: 0;
   height: 40px;
   padding: 0 16px;
   border: none;
@@ -570,7 +575,7 @@ body.modal-open {
   position: fixed;
   width: 100%;
 }
-@media (max-width: 1150px) and (min-width: 376px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .header-bar {
     gap: unset;
     padding: 0 10px;
@@ -584,7 +589,7 @@ body.modal-open {
   .menu .menu-item.text + .menu-item.text::before {
     display:  none;
   }
-  .facebook, .instagram {
+  .facebook, .instagram, .lang{
     display: none;
   }
   .header-nav {
@@ -636,7 +641,7 @@ body.modal-open {
     gap: 16px;             
   }
   .expert-list img {
-    width: 230px;         
+    max-width: 200px;         
     height: auto; 
   }
   .footer-inner {
@@ -647,7 +652,7 @@ body.modal-open {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   html, body {
     overflow-y: auto;             
     overflow-x: hidden;           
@@ -684,7 +689,7 @@ body.modal-open {
     justify-content: center;
   }
   .search-field {
-    max-width: 128px !important;
+    max-width: 287px !important;
     height: 32px;
     margin: 0;
   }
@@ -711,7 +716,7 @@ body.modal-open {
     width: 100vw;
   }
   .header-nav {
-    max-width: 375px;
+    max-width: 768px;
     width: 100%;
     height: 52px;
     display: flex;
@@ -738,7 +743,7 @@ body.modal-open {
     white-space: nowrap;
   }
   .promo-banner {
-    max-width: 375px;
+    max-width: 768px;
     width: 100%;
   }
   .top-banner img {
@@ -757,7 +762,7 @@ body.modal-open {
   .top-banner .arrow.right { right: 8px; }
   .top-banner .arrow i { font-size: 10px; } 
   .benefit {
-    max-width: 375px;
+    max-width: 100%;
     width: 90%;
     height: auto;
     margin-bottom: 48px;
@@ -807,7 +812,8 @@ body.modal-open {
     gap: 16px;
   }
   .banner-bar img {
-    height: 228px;
+    width: 100vw;
+    max-height: 228px;
     object-fit: cover;
   }
   .experts {
@@ -815,6 +821,7 @@ body.modal-open {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 48px;
+    
   }
   .experts h3 {
     text-align: left;
@@ -837,7 +844,7 @@ body.modal-open {
     aspect-ratio: 3 / 4;               
   }
   .footer {
-    max-width: 375px;
+
     width: 100%;
     height: auto;
   }

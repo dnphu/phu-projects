@@ -9,35 +9,31 @@ function initSlider(el, perView = 4) {
     spaceBetween: 30,
     loop: false,
     slidesPerGroup: 1,
-    navigation: {
-      prevEl: prevBtn,
-      nextEl: nextBtn,
-    },
-    pagination: {
-      el: dots,
-      clickable: true,
-    },
+    navigation: { prevEl: prevBtn, nextEl: nextBtn },
+    pagination: { el: dots, clickable: true },
+
+
     breakpoints: {
       0: {
         slidesPerView: 2,
         slidesPerGroup: 1,
-        spaceBetween: 20,
+        spaceBetween: 20
       },
-      376: {
+      769: {
         slidesPerView: 3,
         slidesPerGroup: 1,
+        spaceBetween: 24
       },
-      1150: {
+      1025: {
         slidesPerView: 4,
         slidesPerGroup: 1,
+        spaceBetween: 30
       }
-    },
+    }
   });
 }
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.product-swiper').forEach((el) => {
     initSlider(el, 4);
   });
-}); 
-
-
+});
