@@ -1,0 +1,324 @@
+
+.wrap {
+    max-width: 1440px;
+    height: 48px;
+    margin: 0 auto;
+}
+.fs-topbar-js {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+    background-color: var(--neutral-white);
+    height: 100%;
+}
+.fs-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    font: var(--text-medium);
+    font-weight: 700;
+}
+.fs-count {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.fs-text {
+    font: var(--text-small);
+    font-weight: 400;
+    color: var(--neutral-black);
+}
+.fs-timeboxes { 
+    display: inline-flex; 
+    gap: 8px; 
+}
+.cd-box {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    height: 28px; 
+    width: 28px;
+    background: var(--red); 
+    color: var(--neutral-white);
+    border-radius: 4px; 
+    font-weight: 600; 
+    font: var(--text-normal-semiBold)
+}
+.fs-banner { 
+    max-width: 1440px;
+    position: relative; 
+    margin: 0 auto; 
+}
+.fs-banner img { 
+    width:100%; 
+    display:block; 
+     
+}
+.fs-banner-title {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 80px; 
+  display: grid; 
+  place-items: center;
+  color: var(--neutral-white); 
+  font-size: 61.75px; 
+  font-weight: 600; 
+}
+.fs-timebar-js {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  display: grid; 
+  grid-template-columns: repeat(3,1fr);
+}
+
+.fs-time-btn-js { 
+  height: 80px; 
+  border: 0; 
+  background: var(--neutral-black); 
+  color: var(--neutral-white); 
+  cursor: pointer;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+}
+.fs-time-btn-js.is-active { 
+    background: var(--red); 
+}
+.fs-time-btn-js h4 {
+    font-weight: 600;
+    margin: 0px;
+}
+.fs-time-btn-js p { 
+    font: var(--text-medium);
+    margin:0; 
+    font-weight: 600;
+}
+.fs-categories {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.fs-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral-white);
+    height: 64px;
+    gap: 32px;
+    border-bottom: 1px solid var(--neutral-light);
+}
+.cat-tab-js {
+    background: none;
+    border: none;
+    font: var(--text-medium);
+    font-weight: 400;
+    width: 256px;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.cat-tab-js .is-active {
+    font-weight: 600;
+    border-bottom: 2px solid var(--red);
+    color: var(--red);
+}
+.cat-tab-js::after {
+    content: ""; 
+    position: absolute; 
+    left: 50%; 
+    right: 50%; 
+    bottom: 0px; 
+    height: 4px; 
+    background: var(--red); 
+    transition: all 0.2s ease; 
+}
+.cat-tab-js.is-active::after {
+    left: 0; 
+    right: 0; 
+}
+.fs-panel-js {
+    display: none;
+}
+.fs-panel-js.is-active {
+    display: block;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+    max-width: 1162px;
+    gap: 32px;
+    margin: 0 auto;
+    padding: 40px 0;
+    justify-items: center;
+}
+.product-card {
+    position: relative;
+    width: 256px;
+}
+.product-card img {
+    max-width: 256px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.fs-product-info {
+    display: flex;
+    max-width: 256px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 0;
+    gap: 8px;
+}
+.badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--yellow);
+    border-bottom-right-radius: 16px;
+    max-width: 53px;
+    display: grid;
+    place-items: center;
+    padding: 8px;
+}
+.badge .percent {
+    font: var(--text-small);
+    font-weight: 600;
+}
+.badge .text {
+    font: var(--text-xsmall);
+    font-weight: 600;
+}
+.fs-product-info .product-name {
+    font: var(--text-small);
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+.product-prices {
+    display: flex;
+    align-items: center;
+    gap: 8px;    
+}
+.product-prices .original-price {
+    font: var(--text-small);
+    font-weight: 600;
+    text-decoration: line-through;
+    color: var(--neutral-light);
+}
+.product-prices .discounted-price {
+    font: var(--text-normal-semiBold);
+    font-weight: 600; 
+    color: var(--red);
+}
+.meter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.meter .bar {
+    width: 152px;
+    height: 16px;
+    background: rgb(236, 144, 170);
+    border-radius: 12px;
+}
+.meter .bar b { 
+    display: block; 
+    width: 0;
+    height: 100%; 
+    background: var(--red); 
+    transition: width .25s ease; 
+    border-radius: 12px;
+}
+.product-btn {
+    width: 96px;
+    height: 32px;
+    border: 1px solid var(--neutral-black);
+    border-radius: 19px;
+    font: var(--text-xsmall);
+    font-weight: 600;
+    background: var(--neutral-white);
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .fs-banner-title {
+        font-size: 40px;
+    }  
+    .fs-time-btn-js {
+        height: 64px;
+    }
+    .fs-time-btn-js h4 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .fs-time-btn-js p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .fs-tabs {
+        gap: 0;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+        justify-content: center;
+    }
+}
+@media (max-width: 767px) {
+    .fs-banner-title {
+        font-size: 28px;
+    }  
+    .fs-time-btn-js {
+        height: 48px;
+    }
+    .fs-time-btn-js h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .fs-time-btn-js p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .fs-logo {
+        font-size: 18px;
+    }
+    .fs-ic {
+        width: 16px;
+        height: auto;
+    }
+    .fs-text {
+        font-size: 12px;
+    }
+    .fs-timeboxes {  
+        gap: 4px; 
+    }
+    .cd-box {
+        height: 24px;
+        width: 24px;
+        font-size: 14px;
+    }
+    .fs-tabs {
+        gap: 0;
+    }
+    .cat-tab-js {
+        font-size: 12px;
+    }
+    .product-card {
+        transform: scale(0.6);
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 180px));
+        gap: 0;
+        padding: 10px 0;
+        justify-content: center;
+        align-items: center;
+        grid-auto-rows: 230px;
+    }
+}
