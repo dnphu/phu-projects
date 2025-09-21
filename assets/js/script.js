@@ -5,14 +5,15 @@ document.addEventListener('click', function(event){
     document.querySelectorAll('.mobile-tabbar .tab-item-js')
     .forEach(tab => tab.classList.remove('is-active'));
 
-    clickdTab.classList.add('is-active');
+    clickdTab.classList.toggle('is-active');
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const overlay = document.querySelector('.popup-overlay-js');
-    const modal = document.querySelector('.popup-modal-js');
-    const btnClose = document.querySelector('.popup-close-js');
-    const form = document.querySelector('.popup-form-js');
+  const overlay = document.querySelector('.popup-overlay-js');
+  const modal = document.querySelector('.popup-modal-js');
+  const btnClose = document.querySelector('.popup-close-js');
+  const form = document.querySelector('.popup-form-js');
+  if (overlay && modal && btnClose && form) {
 
     function openPopup() {
         overlay.classList.add('is-open');
@@ -28,16 +29,107 @@ document.addEventListener('DOMContentLoaded', function() {
 
     openPopup();
 
-    btnClose.addEventListener('click', closePopup);
-    overlay.addEventListener('click', closePopup);
+  btnClose.addEventListener('click', closePopup);
+  modal.addEventListener('click', (e) => {
+    if (!e.target.closest('.popup-inner-js')) closePopup();
+  });
 
     form.addEventListener('submit', function(event){
         event.preventDefault();
 
         closePopup();
     });
+  }
 });
 
+{
+  const btnIcon = document.querySelector('.login-toggle-js');
+  const loginForm = document.querySelector('.login-dropdown-js');
+  const mobileBtn = document.querySelector('.tab-item-js.me');
+  const tabletOverlay = document.querySelector('.login-overlay-js');
+  const closeLogin = document.querySelector('.login-close-js');
+
+  if (btnIcon && loginForm && mobileBtn && closeLogin) {
+    btnIcon.addEventListener('click', (e) => {
+      loginForm.classList.toggle('is-open');
+      tabletOverlay.classList.toggle('is-open');
+    });
+    
+    mobileBtn.addEventListener('click', () => {
+      loginForm.classList.toggle('is-open');
+      tabletOverlay.classList.toggle('is-open');
+    });
+
+    closeLogin.addEventListener('click', () => {
+      loginForm.classList.remove('is-open');
+      tabletOverlay.classList.remove('is-open');
+    });
+
+    document.addEventListener('click', (e) => {
+    if (!e.target.closest('.login-toggle-js') && 
+        !e.target.closest('.login-dropdown-js') &&
+        !e.target.closest('.tab-item-js.me')
+      ) {
+      loginForm.classList.remove('is-open');
+      tabletOverlay.classList.remove('is-open');
+    }
+  });
+}
+
+  const btnOpen = document.querySelector('.login-dropdown-js .btn-outline');
+  const btnClose = document.querySelector('.signup-close-js');
+  const overlay = document.querySelector('.signup-overlay-js');
+  const signupForm = document.querySelector('.signup-popup-js');
+
+  if (btnOpen && btnClose && overlay && signupForm) {
+    btnOpen.addEventListener('click', () => {
+      signupForm.classList.add('is-open');
+      overlay.classList.add('is-open');
+      loginForm.classList.remove('is-open');
+      tabletOverlay.classList.remove('is-open');
+    });
+
+    btnClose.addEventListener('click', () => {
+      signupForm.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+    });
+
+    overlay.addEventListener('click', () => {
+      signupForm.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+    });
+
+    mobileBtn.addEventListener('click', () => {
+      signupForm.classList.remove('is-open');
+    });
+  }
+    document.querySelectorAll('.login-form, .signup-info').forEach(form => {
+      form.addEventListener('invalid', () => {
+        form.classList.add('submitted');
+      }, true);
+    });
+  }
+{
+  const day = document.getElementById('day');
+  const month = document.getElementById('month');
+  if (day && month) {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August','September', 'October', 'November', 'December'];
+
+    months.forEach((name, i) => {
+      const opt = document.createElement('option');
+      opt.value = String(i + 1);  
+      opt.textContent = name;      
+      month.appendChild(opt);
+    });
+
+    for (let d = 1; d <= 31; d++) {
+      const opt = document.createElement('option');
+      opt.value = String(d);   
+      opt.textContent = String(d); 
+      day.appendChild(opt);
+    }
+}
+}
 document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.shop-overlay-js');
     const shopsheet = document.querySelector('.shop-inner');
@@ -56,7 +148,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btnIcon.addEventListener('click', btnShop);
     btnClose.addEventListener('click', closeShop);
-    overlay.addEventListener('click', closeShop);
+
+    document.addEventListener('click', (e) => {
+    if (!e.target.closest('.tab-item-js.shop') &&
+        !e.target.closest('.shop-inner')
+      ) {
+      closeShop();
+    }
+  });
 });
 
 function pad2(number) {
@@ -66,27 +165,30 @@ function countdown (boxEl, time) {
   const H = boxEl.querySelector('.h');
   const M = boxEl.querySelector('.m');
   const S = boxEl.querySelector('.s');
+  if (H && M && S) {
+    function tick() {
+      const hours = Math.floor(time / 3600);
+      const minutes = Math.floor((time % 3600) / 60);
+      const seconds = time % 60;
 
-  function tick() {
-    const hours = Math.floor(time / 3600);
-    const minutes = Math.floor((time % 3600) / 60);
-    const seconds = time % 60;
+      H.textContent = pad2(hours);
+      M.textContent = pad2(minutes);
+      S.textContent = pad2(seconds);
 
-    H.textContent = pad2(hours);
-    M.textContent = pad2(minutes);
-    S.textContent = pad2(seconds);
+      time--;
 
-    time--;
-
-    if (time < 0 ) {
-      clearInterval(Start);
+      if (time < 0 ) {
+        clearInterval(Start);
+      }
     }
+    tick();
+    const Start = setInterval(tick, 1000);
   }
-  tick();
-  const Start = setInterval(tick, 1000);
 }
   const boxEl = document.querySelector('.fs-timeboxes')
-  countdown(boxEl, 300);
+  if (boxEl) {
+    countdown(boxEl, 300);
+  }
 
 function createProductCard(product) {
   const productCard = document.createElement('div');
@@ -169,10 +271,11 @@ document.addEventListener('click', (el) => {
   );
 
   renderActive();
-})
+});
 
-renderActive();
-
+  if (document.querySelector('.fs-topbar-js')) {
+    renderActive();
+  }
 
 
 

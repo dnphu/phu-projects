@@ -3,7 +3,7 @@ const products = {
     top: [
         {
             name: 'Sản phẩm 1 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -12,7 +12,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -21,7 +21,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -30,7 +30,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -39,7 +39,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -48,7 +48,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -57,7 +57,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -69,7 +69,7 @@ const products = {
     500: [
         {
             name: 'Sản phẩm 1 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -78,7 +78,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -87,7 +87,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -96,7 +96,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -105,7 +105,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -114,7 +114,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -123,7 +123,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -134,7 +134,7 @@ const products = {
     600: [
         {
             name: 'Sản phẩm 1 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -143,7 +143,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -152,7 +152,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -161,7 +161,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -170,7 +170,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -179,7 +179,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -188,7 +188,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -197,7 +197,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -206,7 +206,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -217,7 +217,7 @@ const products = {
     800: [
         {
             name: 'Sản phẩm 1 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -226,7 +226,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -235,7 +235,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -244,7 +244,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -253,7 +253,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -262,7 +262,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -271,7 +271,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -280,7 +280,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 9:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -293,7 +293,7 @@ const products = {
     top: [
         {
             name: 'Sản phẩm 1 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -302,7 +302,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -311,7 +311,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -320,7 +320,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -329,7 +329,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -338,7 +338,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -347,7 +347,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -359,7 +359,7 @@ const products = {
     500: [
         {
             name: 'Sản phẩm 1 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -368,7 +368,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -377,7 +377,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -386,7 +386,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -395,7 +395,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -404,7 +404,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -415,7 +415,7 @@ const products = {
     600: [
         {
             name: 'Sản phẩm 1 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -424,7 +424,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -433,7 +433,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -442,7 +442,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -451,7 +451,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -460,7 +460,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -469,7 +469,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -478,7 +478,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -487,7 +487,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -498,7 +498,7 @@ const products = {
     800: [
         {
             name: 'Sản phẩm 1 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -507,7 +507,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -516,7 +516,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -525,7 +525,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -534,7 +534,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -543,7 +543,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 15:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -556,7 +556,7 @@ const products = {
     top: [
         {
             name: 'Sản phẩm 1 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -565,7 +565,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -574,7 +574,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -583,7 +583,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -592,7 +592,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '650,000đ',
@@ -604,7 +604,7 @@ const products = {
     500: [
         {
             name: 'Sản phẩm 1 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -613,7 +613,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -622,7 +622,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -631,7 +631,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -640,7 +640,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -649,7 +649,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -658,7 +658,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '500,000đ',
@@ -669,7 +669,7 @@ const products = {
     600: [
         {
             name: 'Sản phẩm 1 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -678,7 +678,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -687,7 +687,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -696,7 +696,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -705,7 +705,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -714,7 +714,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '600,000đ',
@@ -725,7 +725,7 @@ const products = {
     800: [
         {
             name: 'Sản phẩm 1 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -734,7 +734,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -743,7 +743,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -752,7 +752,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -761,7 +761,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -770,7 +770,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 2 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -779,7 +779,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 3 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -788,7 +788,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 4 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',
@@ -797,7 +797,7 @@ const products = {
         },
         {
             name: 'Sản phẩm 5 20:00',
-            image: '../images/flashsale/product photo.png',
+            image: 'assets/images/flashsale/product photo.png',
             badgePercent: '35%',
             originalPrice: '1,000,000đ',
             discountPrice: '800,000đ',

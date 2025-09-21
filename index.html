@@ -24,7 +24,91 @@
                 <a class="menu-item facebook" href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a class="menu-item instagram" href="#"><img src="assets/icons/instagram.svg" alt="Twitter"></a>
                 <a class="menu-item text" href="#"><img src="assets/icons/user-group.svg" alt="">Beautizon Community</a>
-                <a class="menu-item text" href="#"><img src="assets/icons/user-circle.svg" alt="">Đăng nhập</a>
+                <div class="menu-item text keep-mobile">
+                    <a class="login-toggle-js">
+                        <img src="assets/icons/user-circle.svg">Đăng nhập
+                    </a>
+                    <div class="login-dropdown-js">
+                        <div class="login-header-mobile">
+                            <span class="login-title-mobile">Log in</span>
+                            <button class="login-close-js"><img src="assets/icons/Shop/x.svg" alt="Close"></button>
+                        </div>
+                        <div class="login-title">Good morning!</div>
+                        <div class="login-content note">Sign in for a more personalized experienc</div>
+                        <form class="login-form">
+                            <div class="field">
+                                <input class="login-field" type="email" placeholder="" required>
+                                <div class="labelline">Email address</div>
+                            </div>
+                            <div class="password-wrapper">
+                                <div class="field">
+                                    <input class="login-field" type="password" minlength="6" maxlength="12"  placeholder="" required>
+                                    <div class="labelline">Password (6 to 12 characters)</div>
+                                    <a class="forgot-account">Forgot?</a>
+                                </div>
+                            </div>
+                            <button class="btn-primary">Log in</button>
+                            <hr>
+                        </form>
+                        <div class="login-content new">New to Beautizon?</div>
+                        <button class="btn-outline">Sign up</button>
+                    </div>
+                    
+                    <div class="signup-popup-js">
+                        <div class="signup-header">
+                            <span>Create an Account</span>
+                            <button class="signup-close-js"><img src="assets/icons/Shop/x.svg" alt="Close"></button>
+                        </div>
+                        <hr>
+                        <div class="signup-content">Join the Beautizoner loyalty program. Earn points, redeem rewards, and more.</div>
+                        <form class="signup-info">
+                            <div class="signup-name">
+                                <div class="field">
+                                    <input class="signup-field" type="text" placeholder="" required>
+                                    <div class="labelline">First Name*</div>
+                                </div>
+                                <div class="field">
+                                    <input class="signup-field" type="text" placeholder="" required>
+                                    <div class="labelline">Last Name*</div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <input class="signup-field" type="email" placeholder="" required>
+                                <div class="labelline">Email address</div>
+                            </div>
+                            <div class="field">
+                                <input class="signup-field" type="password" minlength="6" maxlength="12"  placeholder="" required>
+                                <div class="labelline">Password (6 to 12 characters)</div>
+                            </div>
+                            <div class="field">
+                                <input class="signup-field" type="tel" placeholder="">
+                                <div class="labelline">Phone number(optional)</div>
+                            </div>
+                            <div class="signup-content">Enter your birthdate to receive a free gift every year.</div>
+                            <div class="signup-birthday">
+                                <select class="signup-field" id="day" required>
+                                    <option value="" selected hidden>Day</option>
+                                </select>
+                                <select class="signup-field" id="month" required>
+                                    <option value="" selected hidden>Month</option>
+                                </select>
+                            </div>
+                            <button class="btn-primary">Join Now</button>
+                        </form>
+                        <p class="signup-note">
+                            By clicking “Join Now” you acknowledge that you are agree to Beautizon’s 
+                            <span class="highlight-red">Policy, Terms of Use, Beauty Insider Terms</span>, 
+                            and to automatically receive Beautizon offers and notifications via email.
+                            <br><br> 
+                            Beautizon uses Google ReCaptcha and by registering, users are subject to Google’s 
+                             <span class="highlight-red">privacy policy</span>
+                             & 
+                             <span class="highlight-red">terms</span>.
+                        </p>
+                    </div>
+                </div>
+                <div class="login-overlay-js"></div>
+                <div class="signup-overlay-js"></div>
                 <button class="menu-item btn-icon heart"><img src="assets/icons/menu item heart.svg" alt="Icon" class="icon"></button>
                 <button class="menu-item btn-icon cart"><img src="assets/icons/menu item cart.svg" alt="Icon" class="icon"></button>
             </div>
@@ -47,7 +131,7 @@
     </nav>
     <div class="promo-banner">
         <p>
-            Banner giới thiệu khuyến mãi.&nbsp;<a href="assets/html/flashsale.html">Link xem chi tiết</a>
+            Banner giới thiệu khuyến mãi.&nbsp;<a href="flashsale.html">Link xem chi tiết</a>
         </p>
     </div>
     <div class="content"> 
@@ -359,7 +443,7 @@
                     <span class="label">ĐĂNG KÝ NHẬN TIN</span>
                     <span class="value">Để nhận những thông tin khuyến mãi đầy hấp dẫn từ chúng tôi</span>
 
-                    <form class="subscribe-form" onsubmit="return false;">
+                    <form class="subscribe-form">
                         <input type="email" placeholder="Địa chỉ email của bạn">
                         <button type="submit">Đăng ký</button>
                     </form>
@@ -387,13 +471,13 @@
             <span>Home</span>
         </a>
 
-        <a class="tab-item-js shop" href="#">
+        <button class="tab-item-js shop">
             <span class="icon-wrap">
                 <img src="assets/icons/shopping-bag.svg" alt="Shop" class="icon-default">
                 <img src="assets/icons/shopping-bag-active.svg" alt="" class="icon-active">
             </span>
             <span>Shop</span>            
-        </a>
+        </button>
 
         <a class="tab-item-js" href="#">
             <span class="icon-wrap">
@@ -411,14 +495,15 @@
             <span>Community</span>
         </a>
 
-        <a class="tab-item-js" href="#">
+        <button class="tab-item-js me">
             <span class="icon-wrap">
                 <img src="assets/icons/user-circle.svg" alt="Me" class="icon-default">
                 <img src="assets/icons/user-circle-active.svg" alt="Me Active" class="icon-active">
             </span>
             <span>Me</span>
-        </a>
+        </button>
         </nav>
+    
     <div class="popup-overlay-js"></div>
     <div class="shop-overlay-js"></div>    
     <div class="shop-sheet-js">
@@ -491,7 +576,7 @@
                 <form class="popup-form-js">
                     <input type="text" placeholder="Your name" required>
                     <input type="email" placeholder="Email address" required>
-                    <button type="submit">Subscribe</button>
+                    <button class="btn-primary" type="submit">Subscribe</button>
                 </form>
                 <p class="popup-note-js">
                     By clicking “Join Now” you acknowledge that you are agree to Beautizon’s 
