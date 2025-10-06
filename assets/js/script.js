@@ -44,37 +44,83 @@ document.addEventListener('DOMContentLoaded', function() {
 
 {
   const btnIcon = document.querySelector('.login-toggle-js');
-  const loginForm = document.querySelector('.login-dropdown-js');
+  const loginDropdown = document.querySelector('.login-dropdown-js');
+  const userDropdown = document.querySelector('.user-dropdown-js');
   const mobileBtn = document.querySelector('.tab-item-js.me');
   const tabletOverlay = document.querySelector('.login-overlay-js');
-  const closeLogin = document.querySelector('.login-close-js');
+  const closeLogin = document.querySelectorAll('.login-close-js');
+  const mobileLabel = document.querySelector('.me-label');
+  const loginForm = document.querySelector('.login-form');
+  const doLogout = document.querySelector('#doLogout');
 
-  if (btnIcon && loginForm && mobileBtn && closeLogin) {
-    btnIcon.addEventListener('click', (e) => {
-      loginForm.classList.toggle('is-open');
-      tabletOverlay.classList.toggle('is-open');
+  
+  const closeAll = () => {
+    loginDropdown.classList.remove('is-open');
+    userDropdown.classList.remove('is-open');
+    tabletOverlay.classList.remove('is-open');
+  }
+
+  const setName = () => {
+    btnIcon.innerHTML = '<img src="assets/icons/user-circle.svg">Selena';
+    mobileLabel.textContent = 'Selena';
+  };
+ 
+  const setGuest = () => {
+    btnIcon.innerHTML = '<img src="assets/icons/user-circle.svg">Đăng nhập';
+    mobileLabel.textContent = 'Me';
+  };
+
+  let isLogged = false;
+
+  if (btnIcon && mobileBtn) {
+    btnIcon.addEventListener('click', () => {
+      if (isLogged) {
+        userDropdown.classList.toggle('is-open');
+        loginDropdown.classList.remove('is-open');
+        tabletOverlay.classList.toggle('is-open');
+      } else {
+        loginDropdown.classList.toggle('is-open');
+        userDropdown.classList.remove('is-open');
+        tabletOverlay.classList.toggle('is-open');
+      }
     });
-    
     mobileBtn.addEventListener('click', () => {
-      loginForm.classList.toggle('is-open');
-      tabletOverlay.classList.toggle('is-open');
+      if (isLogged) {
+        userDropdown.classList.toggle('is-open');
+        loginDropdown.classList.remove('is-open');
+        tabletOverlay.classList.toggle('is-open');
+      } else {
+        loginDropdown.classList.toggle('is-open');
+        userDropdown.classList.remove('is-open');
+        tabletOverlay.classList.toggle('is-open');
+      }
     });
+    closeLogin.forEach(btn => btn.addEventListener('click', closeAll));
 
-    closeLogin.addEventListener('click', () => {
-      loginForm.classList.remove('is-open');
-      tabletOverlay.classList.remove('is-open');
-    });
-
-    document.addEventListener('click', (e) => {
-    if (!e.target.closest('.login-toggle-js') && 
-        !e.target.closest('.login-dropdown-js') &&
-        !e.target.closest('.tab-item-js.me')
+    document.addEventListener('mousedown', (e) => {
+      if (
+        !e.target.closest('.login-toggle-js') &&
+        !e.target.closest('.tab-item-js.me') &&
+        !e.target.closest('.user-dropdown-js') &&
+        !e.target.closest('.login-dropdown-js') 
       ) {
-      loginForm.classList.remove('is-open');
-      tabletOverlay.classList.remove('is-open');
-    }
-  });
-}
+        closeAll();
+      }
+    });
+
+    loginForm.addEventListener('submit', (e) => {
+      isLogged = true;
+      e.preventDefault()
+      setName();
+      closeAll();
+    });
+    doLogout.addEventListener('click', (e) => {
+      e.preventDefault()
+      isLogged = false;
+      setGuest();
+      closeAll();
+    });
+  }
 
   const btnOpen = document.querySelector('.login-dropdown-js .btn-outline');
   const btnClose = document.querySelector('.signup-close-js');
@@ -85,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     btnOpen.addEventListener('click', () => {
       signupForm.classList.add('is-open');
       overlay.classList.add('is-open');
-      loginForm.classList.remove('is-open');
+      loginDropdown.classList.remove('is-open');
       tabletOverlay.classList.remove('is-open');
     });
 
@@ -108,7 +154,8 @@ document.addEventListener('DOMContentLoaded', function() {
         form.classList.add('submitted');
       }, true);
     });
-  }
+}
+
 {
   const day = document.getElementById('day');
   const month = document.getElementById('month');
@@ -145,17 +192,18 @@ document.addEventListener('DOMContentLoaded', function() {
       overlay.classList.remove('is-open');
       shopsheet.classList.remove('is-open');
     }
+    if (overlay & shopsheet & btnClose & btnIcon) {
+      btnIcon.addEventListener('click', btnShop);
+      btnClose.addEventListener('click', closeShop);
 
-    btnIcon.addEventListener('click', btnShop);
-    btnClose.addEventListener('click', closeShop);
-
-    document.addEventListener('click', (e) => {
-    if (!e.target.closest('.tab-item-js.shop') &&
-        !e.target.closest('.shop-inner')
-      ) {
-      closeShop();
-    }
-  });
+      document.addEventListener('click', (e) => {
+      if (!e.target.closest('.tab-item-js.shop') &&
+          !e.target.closest('.shop-inner')
+        ) {
+        closeShop();
+      }
+    });
+  }
 });
 
 function pad2(number) {

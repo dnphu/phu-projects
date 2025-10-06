@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash sale</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css"/>
+    <title>Account</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/flashsale.css">
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/account.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -144,75 +142,126 @@
             <li><a href="#">Giảm giá & Khuyến mãi</a></li>
         </ul>
     </nav>
-    <div class="wrap">
-        <div class="fs-topbar-js" data-seconds="10800">
-            <span class="fs-logo">
-                <span>FLASH&nbsp;</span>
-                <img class="fs-ic" src="assets/icons/Flash sale/flash sale.svg" alt="">
-                <span>ALE</span>
-            </span> 
-            <div class="fs-count">
-                <span class="fs-text">KẾT THÚC TRONG</span>
+    <div class="promo-banner">
+        <p>
+            Banner giới thiệu khuyến mãi.&nbsp;<a href="flashsale.html">Link xem chi tiết</a>
+        </p>
+    </div>
+    <main class="main">
+    <div class="account-container">
+        <button class="account-sidebar-btn">
+            <span>Account Information</span>
+            <img src="assets/icons/chevron-down.svg" alt="" class="icon">
+        </button>
+        <div class="account-sidebar">
+        <ul>
+            <li class="active">Account Information</li>
+            <li>Recent Orders</li>
+            <li>Saved Addresses</li>
+            <li>Payments & Credits</li>
+            <li>My Reviews</li>
+            <li>Log out</li>
+        </ul>
+        </div>
 
-                <span class="fs-timeboxes">
-                    <span class="cd-box"><b class="h">00</b></span>
-                    <span class="cd-box"><b class="m">00</b></span>
-                    <span class="cd-box"><b class="s">00</b></span>
-                </span>
+        <section class="account-content">
+            <h6>Account Information</h6>
+            <hr class="sep">
+            <div class="acc-row" data-field="name">
+                <div class="row-head">
+                    <span class="label">Name</span>
+                    <div class="row-edit">
+                        <span class="text">Selena Gomes</span>
+                        <button class="btn-edit">Edit</button>
+                    </div>
+                </div>
+
+                <form class="edit login-form is-hidden">
+                    <div class="form-edit">
+                        <div class="field">
+                            <input class="signup-field first-input" type="text" placeholder="" required>
+                            <div class="labelline">First Name</div>
+                        </div>
+                        <div class="field">
+                            <input class="signup-field last-input" type="text" placeholder="" required>
+                            <div class="labelline">Last Name</div>
+                    </div>
+                    </div>
+                    <div class="row-actions">
+                        <button type="button" class="btn-outline cancel-btn">Cancel</button>
+                        <button type="submit" class="btn-primary save-btn">Save</button>
+                    </div>
+                    <hr class="sep">
+                </form>
+            <hr class="line">
             </div>
-        </div>
+
+            <div class="acc-row" data-field="email">
+                <div class="row-head">
+                    <span class="label">Email</span>
+                    <div class="row-edit">
+                        <span class="text">selena@gmail.com</span>
+                        <button class="btn-edit">Edit</button>
+                    </div>
+                </div>
+
+                <form class="edit login-form is-hidden">
+                    <div class="field">
+                        <input class="signup-field email-input" type="email" placeholder="" required>
+                        <div class="labelline">Email address</div>
+                    </div>
+                    <div class="row-actions">
+                        <button type="button" class="btn-outline cancel-btn">Cancel</button>
+                        <button type="submit" class="btn-primary save-btn">Save</button>
+                    </div>
+                    <hr class="sep">
+                </form>
+                <hr class="line">
+                </div>
+
+            <div class="acc-row" data-field="password">
+                <div class="row-head">
+                    <span class="label">Password</span>
+                    <div class="row-edit">
+                        <span class="text">••••••••</span>
+                        <button class="btn-edit">Edit</button>
+                    </div>
+                </div>
+
+                <form class="edit login-form is-hidden">
+                    <div class="field">
+                        <input class="signup-field password-input" type="password" minlength="6" maxlength="12"  placeholder="" required>
+                        <div class="labelline">Password (6 to 12 characters)</div>
+                    </div>
+                    <div class="row-actions">
+                        <button type="button" class="btn-outline cancel-btn">Cancel</button>
+                        <button type="submit" class="btn-primary save-btn">Save</button>
+                    </div>
+                    <hr class="sep">
+                </form>
+                <hr class="line">
+                </div>
+
+            <div class="acc-row">
+                <div class="row-head desktop">
+                    <span class="label">Birthday</span>
+                    <div class="row-edit">
+                        <span class="text">February 17, 1989</span>
+                        <a class="btn-link" href="#">Contact us to change</a>
+                    </div>
+                </div>
+                <div class="row-head mobile">
+                    <div class="row-mobile">
+                        <span class="label">Birthday</span>
+                        <span class="text">February 17, 1989</span>
+                    </div>
+                        <a class="btn-link" href="#">Contact us to change</a>
+                    </div>
+                    <hr class="line">
+            </div>
+        </section>
     </div>
-    <div class="fs-banner">
-        <picture>
-            <source media="(max-width: 767px)" srcset="assets/images/flashsale/banner-promo-sets.png">
-            <img src="assets/images/flashsale/banner.png" alt="Promotion banner">
-        </picture>
-        <h2 class="fs-banner-title">Promotion banner</h2>
-
-        <div class="fs-timebar-js">
-            <button class="fs-time-btn-js is-active" data-time="9">
-                <h4>9:00</h4>
-                <p>Đang diễn ra</p>
-            </button>
-
-            <button class="fs-time-btn-js" data-time="15">
-                <h4>15:00</h4>
-                <p>Sắp diễn ra</p>
-            </button>
-
-            <button class="fs-time-btn-js" data-time="20">
-                <h4>20:00</h4>
-                <p>Sắp diễn ra</p>
-            </button>
-        </div>
-    </div>
-    
-    <section class="fs-categories">
-        <div class="fs-tabs">
-            <button class="cat-tab-js is-active" data-tab="top">Top-picks</button>
-            <button class="cat-tab-js" data-tab="500">Đồng giá 500k</button>
-            <button class="cat-tab-js" data-tab="600">Đồng giá 600k</button>
-            <button class="cat-tab-js" data-tab="800">Đồng giá 800k</button>
-        </div>
-        <div class="fs-tabpanels">
-            <section class="fs-panel-js is-active" data-tab="top">
-                <div class="product-grid" id="grid-top"></div>
-            </section>
-
-            <section class="fs-panel-js" data-tab="500">
-                <div class="product-grid" id="grid-500"></div>
-            </section>
-
-            <section class="fs-panel-js" data-tab="600">
-                <div class="product-grid" id="grid-600"></div>
-            </section>
-
-            <section class="fs-panel-js" data-tab="800">
-                <div class="product-grid" id="grid-800"></div>
-            </section>
-        </div>
-    </section>
-        
+    </main>
     <footer class="footer">
             <div class="footer-inner">
                 <div class="footer-links">
@@ -370,9 +419,7 @@
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
-    <script src="assets/js/slider.js"></script>
-    <script src="assets/js/mock-data.js"></script>
+    <script src="assets/js/account.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

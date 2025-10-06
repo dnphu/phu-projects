@@ -2,7 +2,7 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 5000;
 }
 .container-header {
   max-width: 1440px;
@@ -74,6 +74,7 @@
   font-weight: 400;
   text-decoration: none;
   position: relative;
+  white-space: nowrap;
 }
 .btn-icon {
   flex-shrink: 0;
@@ -92,6 +93,12 @@
   gap: 8px;
   cursor: pointer;                  
 }
+.login-close-js {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.user-dropdown-js,
 .login-dropdown-js {
   position: absolute;
   top: 130%;
@@ -106,6 +113,38 @@
   display: none;
   z-index: 3000;
 }
+.user-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.user-title {
+  font: var(--text-medium);
+  font-weight: 600;
+}
+.user-dropdown-js ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+.user-dropdown-js li a {
+  text-decoration: none;
+  font: var(--text-small);
+  font-weight: 400;
+  color: var(--neutral-black);
+  display: block;
+  width: 100%;
+}
+#doLogout {
+  border-top: 1px solid var(--neutral-extra-light);
+  padding-top: 16px;
+  cursor: pointer;
+}
+.user-dropdown-js.is-open,
 .login-dropdown-js.is-open {
    display: block;
 }
@@ -182,7 +221,7 @@
   width: 100%;
   height: 40px;
   border-radius: 20px;
-  border: 2px solid var(--neutral-extra-dark);
+  border: 2.3px solid var(--neutral-extra-dark);
   background: var(--neutral-white);
   font: var( --text-normal);
   color: var(--neutral-extra-dark);
@@ -249,6 +288,9 @@
   gap: 16px;
   height: 48px;
 }
+.signup-name .field { 
+  flex:1; 
+}
 .signup-birthday .signup-field {
   width: 100%;
   border-radius: 8px;
@@ -306,6 +348,7 @@ form.submitted select:invalid  {
   gap: 18px;
   list-style: none;
   margin: 0 auto;
+  white-space: nowrap;
 }
 .header-nav .nav-list a {
   display: inline-flex;
@@ -672,14 +715,19 @@ form.submitted select:invalid  {
   transition: opacity .25s ease, visibility .25s ease;
 }
 .shop-overlay-js{
-  z-index: 1499;
+  bottom: 60px;
+  z-index: 6000;
+  display: none;
+}
+.popup-overlay-js {
+  z-index: 7000;
 }
 .popup-modal-js {
   position: fixed;
   inset: 0;
   display: grid;
   place-content: center;
-  z-index: 2001;
+  z-index: 7001;
   opacity: 0;
   visibility: hidden;
   transition: opacity .25s ease, visibility .25s ease;
@@ -803,13 +851,11 @@ body.modal-open {
     left: 0;
     right: 0;
     bottom: 56px;
-    z-index: 1500;
-    transform: translateY(120%);
+    z-index: 6000;
     transition: transform .3s ease;
+    display: none;
   }
-  .shop-inner.is-open {
-    transform: translateY(0);
-  }
+  
 @media (min-width: 768px) and (max-width: 1024px) {
    html, body {
     overflow-y: auto;             
@@ -817,7 +863,6 @@ body.modal-open {
   }
   .header {
     position: fixed;
-    z-index: 1000;
     width: 100%;
   }
   .header-bar {
@@ -889,7 +934,29 @@ body.modal-open {
     inset: 0;
     display: grid;
     z-index: 2001;
-}
+ }
+  .user-dropdown-js {
+    position: fixed;
+    max-width: 100vw;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;              
+    background: #fff;
+    border-radius: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,.1);
+    display: none;         
+    z-index: 3000;
+  }
+  .user-title {
+    font: var(--text-large);
+    font-weight: 600;
+  }
+  .user-dropdown-js li a {
+    font: var(--text-normal);
+  }
   .login-overlay-js.is-open {
     opacity: 1;
     visibility: visible;
@@ -914,10 +981,6 @@ body.modal-open {
     font-weight: 600;
     flex: 1;
     text-align: center;
-  }
-  .login-close-js {
-    border: none;
-    background: none;
   }
   .benefit {
     max-width: 900px;
@@ -997,6 +1060,10 @@ body.modal-open {
   .popup-form-js {
     width: 100%;
   }
+  .shop-overlay-js,
+  .shop-inner.is-open {
+    display: block;
+  }
   .shop-header {
     width: 100%;
     height: 24px;
@@ -1068,7 +1135,6 @@ body.modal-open {
   }
   .header {
     position: fixed;
-    z-index: 1000;
   }
   .header-nav {
     margin-top: 56px  ;
@@ -1100,7 +1166,7 @@ body.modal-open {
     width: 100%;
     height: 32px;
   }
-  .menu > *:not(.btn-icon):not(.keep-mobile) {
+  .menu > *:not(.btn-icon):not(.keep-mobile):not(.login-overlay-js) {
     display: none !important;
   }
   .lang {
@@ -1165,8 +1231,25 @@ body.modal-open {
     border-radius: 0; 
     box-shadow: none;
   }
-  .login-overlay-js { 
-    display: none !important; 
+  .user-dropdown-js {
+    position: fixed;
+    max-width: 100vw;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;              
+    background: #fff;
+    border-radius: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,.1);
+    display: none;         
+    z-index: 3000;
+  }
+  .login-overlay-js.is-open { 
+    opacity: 1;
+    visibility: visible;
+    z-index: 2000;
   }
   .login-title,
   .login-content.note {
@@ -1184,10 +1267,6 @@ body.modal-open {
     font-weight: 600;
     flex: 1;
     text-align: center;
-  }
-  .login-close-js {
-    border: none;
-    background: none;
   }
   .promo-banner {
     max-width: 768px;
@@ -1369,6 +1448,10 @@ body.modal-open {
   }
   .popup-form-js {
     width: 100%;
+  }
+  .shop-overlay-js,
+  .shop-inner.is-open {
+    display: block;
   }
   .shop-header {
     width: 100%;

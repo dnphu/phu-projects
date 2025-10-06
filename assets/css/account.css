@@ -1,0 +1,204 @@
+*, *::before, *::after { box-sizing: border-box; }
+.account-container {
+  max-width: 1440px;
+  display: flex;
+  gap: 32px;
+  padding: 0 20px;
+  margin: 32px auto;
+  justify-content: center;
+  background: var(--neutral-white);
+}
+.account-sidebar-btn {
+  display: none;
+}
+.account-sidebar ul {
+  max-width: 160px;
+  width: 100vw;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.account-sidebar li {
+  font: var(--text-small);
+  cursor: pointer;
+  padding: 9px 0;
+  width: 100%;
+}
+.account-sidebar li.active {
+  font-weight: 600;
+}
+.account-content {
+  max-width: 736px;
+  width: 100%;
+  border: 1px solid var(--neutral-light);
+  border-radius: 8px;
+}
+.account-content h6 {
+  margin: 16px 24px;
+  font-weight: 600;
+}
+.acc-row {
+  font: var(--text-small);
+  padding: 0 24px;
+  padding-top: 24px;
+}
+.row-head.mobile {
+  display: none;
+}
+.row-head {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+.row-edit {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.edit .label {
+  max-width: 136px;
+  width: 100%;
+  font: var(--text-small);
+  font-weight: 600;
+}
+.btn-edit {
+  background: none;
+  border: none;
+  color: var(--red);
+  cursor: pointer;
+  font: var(--text-small);
+  font-weight: 600;
+}
+.btn-link {
+  text-decoration: none;
+  color: var(--red);
+  cursor: pointer;
+  font: var(--text-small);
+  font-weight: 600;
+}
+.edit {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+}
+.form-edit {
+  display: flex;
+  gap: 16px;
+}
+.edit .signup-field {
+  max-width: 240px;
+  width: 100vw;
+}
+.row-actions {
+  display: flex;
+  gap: 16px;
+}
+.row-actions button {
+  max-width: 112px;
+  margin-bottom: 8px;
+}
+.line,
+.sep {
+  border: 0;
+  border-top: 1px solid var(--neutral-light);
+  margin: 0;
+}
+.is-hidden {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+  html, body {
+    overflow-y: auto;             
+    overflow-x: hidden;           
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;                
+  }
+  .acc-row {
+    padding: 16px;
+    padding-bottom: 0;
+  }
+  .header-nav {
+    display: none;
+  }
+  .account-container {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 8px;
+    gap: 0;
+  }
+  .account-sidebar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    background: var(--neutral-black);
+    color: var(--neutral-white);
+    font: var(--text-small);
+  }
+  .account-content {
+    border: none;
+  }
+  .account-container.is-open .icon{
+    transform:rotate(180deg)
+  }
+  .account-sidebar {
+    width: 100vw;
+    background: var(--neutral-black);
+    display: none;
+  }
+  .account-sidebar ul {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--neutral-light);
+    justify-content: center;
+    text-align: center;
+    font: var(--text-xsmall);
+  }
+  .account-sidebar li {
+    display: block;
+    margin: 0 auto;
+  }
+  .form-edit {
+    flex-direction: column;
+  }
+  .edit .signup-field {
+    max-width: 100%;
+    width: 100vw;
+  }
+  .acc-row button {
+    max-width: 100%;
+  }
+  .edit .label {
+  max-width: 72px;
+  width: 100%;
+  font: var(--text-small);
+  font-weight: 600; 
+  }
+  .row-head.desktop {
+    display: none;
+  }
+  .row-head {
+    gap: 16px
+  }
+  .row-head.mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .row-mobile {
+    display: flex;
+    gap: 16px;
+  }
+  footer {
+    display: none;
+  }
+}
