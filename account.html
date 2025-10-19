@@ -149,116 +149,268 @@
     </div>
     <main class="main">
     <div class="account-container">
-        <button class="account-sidebar-btn">
+        <button class="account-sidebar-btn orders">
             <span>Account Information</span>
             <img src="assets/icons/chevron-down.svg" alt="" class="icon">
         </button>
+        <div class="account-sidebar-btn detail is-hidden">
+            <button class="back-btn"><i class="fa-solid fa-angle-left"></i></button>
+            <span>Recent Orders</span>
+        </div>
         <div class="account-sidebar">
         <ul>
-            <li class="active">Account Information</li>
-            <li>Recent Orders</li>
-            <li>Saved Addresses</li>
-            <li>Payments & Credits</li>
-            <li>My Reviews</li>
+            <li data-target="account" class="active">Account Information</li>
+            <li data-target="orders">Recent Orders</li>
+            <li data-target="addresses">Saved Addresses</li>
+            <li data-target="payments">Payments & Credits</li>
+            <li data-target="reviews">My Reviews</li>
             <li>Log out</li>
         </ul>
         </div>
 
-        <section class="account-content">
-            <h6>Account Information</h6>
-            <hr class="sep">
-            <div class="acc-row" data-field="name">
-                <div class="row-head">
-                    <span class="label">Name</span>
-                    <div class="row-edit">
-                        <span class="text">Selena Gomes</span>
-                        <button class="btn-edit">Edit</button>
-                    </div>
-                </div>
-
-                <form class="edit login-form is-hidden">
-                    <div class="form-edit">
-                        <div class="field">
-                            <input class="signup-field first-input" type="text" placeholder="" required>
-                            <div class="labelline">First Name</div>
+        <section class="account-content" data-view="account">
+            <div class="content">    
+                <h6>Account Information</h6>
+                <hr class="sep">
+                <div class="acc-row" data-field="name">
+                    <div class="row-head">
+                        <span class="label">Name</span>
+                        <div class="row-edit">
+                            <span class="text">Selena Gomes</span>
+                            <button class="btn-edit">Edit</button>
                         </div>
+                    </div>
+
+                    <form class="edit login-form is-hidden">
+                        <div class="form-edit">
+                            <div class="field">
+                                <input class="signup-field first-input" type="text" placeholder="" required>
+                                <div class="labelline">First Name</div>
+                            </div>
+                            <div class="field">
+                                <input class="signup-field last-input" type="text" placeholder="" required>
+                                <div class="labelline">Last Name</div>
+                        </div>
+                        </div>
+                        <div class="row-actions">
+                            <button type="button" class="btn-outline cancel-btn">Cancel</button>
+                            <button type="submit" class="btn-primary save-btn">Save</button>
+                        </div>
+                        <hr class="sep">
+                    </form>
+                <hr class="line">
+                </div>
+
+                <div class="acc-row" data-field="email">
+                    <div class="row-head">
+                        <span class="label">Email</span>
+                        <div class="row-edit">
+                            <span class="text">selena@gmail.com</span>
+                            <button class="btn-edit">Edit</button>
+                        </div>
+                    </div>
+
+                    <form class="edit login-form is-hidden">
                         <div class="field">
-                            <input class="signup-field last-input" type="text" placeholder="" required>
-                            <div class="labelline">Last Name</div>
-                    </div>
-                    </div>
-                    <div class="row-actions">
-                        <button type="button" class="btn-outline cancel-btn">Cancel</button>
-                        <button type="submit" class="btn-primary save-btn">Save</button>
-                    </div>
-                    <hr class="sep">
-                </form>
-            <hr class="line">
-            </div>
-
-            <div class="acc-row" data-field="email">
-                <div class="row-head">
-                    <span class="label">Email</span>
-                    <div class="row-edit">
-                        <span class="text">selena@gmail.com</span>
-                        <button class="btn-edit">Edit</button>
-                    </div>
-                </div>
-
-                <form class="edit login-form is-hidden">
-                    <div class="field">
-                        <input class="signup-field email-input" type="email" placeholder="" required>
-                        <div class="labelline">Email address</div>
-                    </div>
-                    <div class="row-actions">
-                        <button type="button" class="btn-outline cancel-btn">Cancel</button>
-                        <button type="submit" class="btn-primary save-btn">Save</button>
-                    </div>
-                    <hr class="sep">
-                </form>
-                <hr class="line">
-                </div>
-
-            <div class="acc-row" data-field="password">
-                <div class="row-head">
-                    <span class="label">Password</span>
-                    <div class="row-edit">
-                        <span class="text">••••••••</span>
-                        <button class="btn-edit">Edit</button>
-                    </div>
-                </div>
-
-                <form class="edit login-form is-hidden">
-                    <div class="field">
-                        <input class="signup-field password-input" type="password" minlength="6" maxlength="12"  placeholder="" required>
-                        <div class="labelline">Password (6 to 12 characters)</div>
-                    </div>
-                    <div class="row-actions">
-                        <button type="button" class="btn-outline cancel-btn">Cancel</button>
-                        <button type="submit" class="btn-primary save-btn">Save</button>
-                    </div>
-                    <hr class="sep">
-                </form>
-                <hr class="line">
-                </div>
-
-            <div class="acc-row">
-                <div class="row-head desktop">
-                    <span class="label">Birthday</span>
-                    <div class="row-edit">
-                        <span class="text">February 17, 1989</span>
-                        <a class="btn-link" href="#">Contact us to change</a>
-                    </div>
-                </div>
-                <div class="row-head mobile">
-                    <div class="row-mobile">
-                        <span class="label">Birthday</span>
-                        <span class="text">February 17, 1989</span>
-                    </div>
-                        <a class="btn-link" href="#">Contact us to change</a>
-                    </div>
+                            <input class="signup-field email-input" type="email" placeholder="" required>
+                            <div class="labelline">Email address</div>
+                        </div>
+                        <div class="row-actions">
+                            <button type="button" class="btn-outline cancel-btn">Cancel</button>
+                            <button type="submit" class="btn-primary save-btn">Save</button>
+                        </div>
+                        <hr class="sep">
+                    </form>
                     <hr class="line">
+                    </div>
+
+                <div class="acc-row" data-field="password">
+                    <div class="row-head">
+                        <span class="label">Password</span>
+                        <div class="row-edit">
+                            <span class="text">••••••••</span>
+                            <button class="btn-edit">Edit</button>
+                        </div>
+                    </div>
+
+                    <form class="edit login-form is-hidden">
+                        <div class="field">
+                            <input class="signup-field password-input" type="password" minlength="6" maxlength="12"  placeholder="" required>
+                            <div class="labelline">Password (6 to 12 characters)</div>
+                        </div>
+                        <div class="row-actions">
+                            <button type="button" class="btn-outline cancel-btn">Cancel</button>
+                            <button type="submit" class="btn-primary save-btn">Save</button>
+                        </div>
+                        <hr class="sep">
+                    </form>
+                    <hr class="line">
+                    </div>
+
+                <div class="acc-row">
+                    <div class="row-head desktop">
+                        <span class="label">Birthday</span>
+                        <div class="row-edit">
+                            <span class="text">February 17, 1989</span>
+                            <a class="btn-link" href="#">Contact us to change</a>
+                        </div>
+                    </div>
+                    <div class="row-head mobile">
+                        <div class="row-mobile">
+                            <span class="label">Birthday</span>
+                            <span class="text">February 17, 1989</span>
+                        </div>
+                            <a class="btn-link" href="#">Contact us to change</a>
+                        </div>
+                </div>
             </div>
+        </section>
+
+        <section class="account-content is-hidden" data-view="orders">
+            <div class="content">
+                <h6>Recent Orders</h6>
+                <hr class="order sep">
+                <table class="table-order">
+                    <thead>
+                        <tr>
+                            <th class="col-id">Order ID</th>
+                            <th class="col-date">Date</th>
+                            <th class="col-product">Product</th>
+                            <th class="col-total">Total</th>
+                            <th class="col-status">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="order-body"></tbody>
+                </table>
+            </div>
+            <div class="order-page">
+                <div class="prev"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="pages"></div>
+                <div class="next"><i class="fa-solid fa-angle-right"></i></div>
+            </div>
+        </section>
+
+        <section class="account-content is-hidden" data-view="order-details">
+            <div class="content content-table-detail">
+                <div class="header-content">
+                    <div class="title">
+                        <h6>Order ID: #58283728</h6>
+                        <span class="status">- Delivered</span>
+                    </div>
+                    <div class="date">Date: 18/01/2021</div>
+                </div>
+                <div class="header-content-mobile">
+                    <div class="id">Order ID: #58283728</div>
+                    <div>Date: 18/01/2021</div>
+                    <div>Status: Delivered</div>
+                </div>
+                <hr class="sep">
+                <div class="pro">Product info</div>
+                <table class="table-detail">
+                    <thead>
+                        <tr>
+                            <th class="col-product">Product</th>
+                            <th class="col-price">Price</th>
+                            <th class="col-quantity">Quantity</th>
+                            <th class="col-discount">Discount</th>
+                            <th class="col-subtotal">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="detail-body">
+                        <tr class="row-product">
+                            <td class="col-product">
+                                <div class="product-info">
+                                    <img src="assets/icons/product.png" alt="Product">
+                                    <span class="name">Beautizon Matte Lipstick - 03 Blush</span>
+                                </div>
+                            </td>
+                            <td class="col-price">2,273,000₫</td>
+                            <td class="col-quantity">1</td>
+                            <td class="col-discount">0₫</td>
+                            <td class="col-subtotal">2,273,000₫</td>
+                        </tr>
+
+                        <tr class="col-product-mobile">
+                            <td>
+                                <div class="product-info-mobile">
+                                    <img src="assets/icons/product.png" alt="Product">
+                                    <div class="info-mobile">
+                                        <span class="name">Beautizon Matte Lipstick - 03 Blush</span>
+                                        <div class="price-quantity">
+                                            <span class="price">2,273,000₫</span>
+                                            <span class="quantity">x 1</span>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr class="sep">
+                <div class="footer-detail"> 
+                    <div class="review">
+                        <button class="btn-outline">Order again</button>
+                        <button class="btn-outline">Write review</button>
+                    </div>
+                    <div class="summary">
+                        <div class="row">
+                            <div class="label">Subtotal</div> 
+                            <div class="value">2,273,000₫</div>
+                        </div>
+                        <div class="row">
+                            <div class="label">Fee</div> 
+                            <div class="value">0₫</div>
+                        </div>
+                        <div class="row total">
+                            <div class="label">Total</div> 
+                            <div class="value">2,273,000₫</div>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <div class="content content-recipient">
+                <div class="detail-title">Recipient Address</div>
+                <hr class="sep">
+                <div class="recipient">
+                    <div class="recipient-name">SELENA GOMES</div>
+                    <div>
+                        <span>Address:</span> <span class="value">18 An Nhon 3, An Hai Bac, Son Tra, Da Nang</span>
+                    </div>
+                    <div>
+                        <span>Phone number:</span> <span class="value">+84 905123456</span>
+                    </div>
+                </div>
+            </div>
+            <div class="order-method">
+                <div class="content content-shipping">
+                    <div class="detail-title">Shipping method</div>
+                    <hr class="sep">
+                    <div class="method">
+                        <div>
+                            <span>Deliver on:</span> <span class="value">20/01/2021</span>
+                        </div>
+                        <div>
+                            <span>Shipping fee</span> <span class="value">0₫</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content content-payment">
+                    <div class="detail-title">Payment method</div>
+                    <hr class="sep">
+                    <div class="method">
+                        <div>
+                            <span>Cash On Delivery (COD)</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="back-btn"><i class="fa-solid fa-angle-left"></i>Back to orders</button>            
+        </section>
+
+        <section class="account-content is-hidden" data-view="">
+            <h6>Recent Orders</h6>
+            <hr class="sep">
         </section>
     </div>
     </main>
