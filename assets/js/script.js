@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
       overlay.classList.remove('is-open');
       shopsheet.classList.remove('is-open');
     }
-    if (overlay & shopsheet & btnClose & btnIcon) {
+    if (overlay && shopsheet && btnClose && btnIcon) {
       btnIcon.addEventListener('click', btnShop);
       btnClose.addEventListener('click', closeShop);
 
