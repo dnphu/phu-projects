@@ -203,7 +203,7 @@ document.addEventListener('submit', (e) => {
   function detailTemplate(o) {
   const items = o.items;
   const summary = o.summary;
-  const deliver = o.shipping?.deliverOn || '2021-01-22';
+  const deliver = o.shipping?.deliverOn;
 
   const itemsHTML = items?.map(it => `
     <tr class="row-product">
@@ -236,6 +236,67 @@ document.addEventListener('submit', (e) => {
 
   `).join('');
 
+  const popupReview = `
+  <div class="popup-overlay-js review"></div>
+  <div class="review-popup is-hidden">
+      <div class="review-popup-header">
+          <span>Review your order</span>
+          <button class="review-popup-close"><img src="assets/icons/Shop/x.svg"></button>
+      </div>
+      <hr class="sep">
+      <div class="review-popup-content">
+          <div class="review-orders">
+              <div class="orders-info">
+                ${o.items.map(it => `
+                  <div class="item-info">
+                    <img src="${it.image || 'assets/icons/product.png'}">
+                    <span class="name">${it.name}</span>
+                  </div>
+                  `).join('')}                           
+              </div>
+          </div>
+          <div class="review-label">Please rate this product</div>
+          <div class="review-stars">
+              <button class="star" data-value="1">
+                  <img class="star-outline" src="assets/icons/Account/star.svg">
+                  <img class="star-filled" src="assets/icons/Account/star-filled.svg">
+              </button>
+              <button class="star" data-value="2">
+                  <img class="star-outline" src="assets/icons/Account/star.svg">
+                  <img class="star-filled" src="assets/icons/Account/star-filled.svg">
+              </button>
+              <button class="star" data-value="3">
+                  <img class="star-outline" src="assets/icons/Account/star.svg">
+                  <img class="star-filled" src="assets/icons/Account/star-filled.svg">
+              </button>
+              <button class="star" data-value="4">
+                  <img class="star-outline" src="assets/icons/Account/star.svg">
+                  <img class="star-filled" src="assets/icons/Account/star-filled.svg">
+              </button>
+              <button class="star" data-value="5">
+                  <img class="star-outline" src="assets/icons/Account/star.svg">
+                  <img class="star-filled" src="assets/icons/Account/star-filled.svg">
+              </button>
+          </div>
+          <textarea class="review-text" 
+              placeholder="Please share your feeling about this product"></textarea>
+          <button class="btn-primary review-submit">Submit</button>
+      </div>
+  </div>
+  <div class="review-success-popup is-hidden">
+    <div class="success-inner">
+        <button class="review-popup-close success-close">
+          <img src="assets/icons/Shop/x.svg" alt="Close">
+        </button>
+        <img class="success-icon" src="assets/icons/Account/Happy star.png" alt="">
+        <h6 class="success-title">Thank you for your review!</h6>
+        <p class="success-desc">
+          We will notify you once your reviews is verified. Your review help people having a better shopping experience.
+        </p>
+        <button class="btn-primary success-ok">OK</button>
+    </div>
+  </div>
+  `;
   return `
   <div class="content content-table-detail">
     <div class="header-content">
@@ -275,7 +336,7 @@ document.addEventListener('submit', (e) => {
     <div class="footer-detail"> 
       <div class="review">
         <button class="btn-outline">Order again</button>
-        <button class="btn-outline">Write review</button>
+        <button class="btn-outline write-review-btn">Write review</button>
       </div>
       <div class="summary">
         <div class="row"><div class="label">Subtotal</div><div class="value">${vndFormat(summary.subtotal)}</div></div>
@@ -314,13 +375,13 @@ document.addEventListener('submit', (e) => {
     </div>
   </div>
 
-  <button class="back-btn"><i class="fa-solid fa-angle-left"></i>Back to orders</button>`;
+  <button class="back-btn"><i class="fa-solid fa-angle-left"></i>Back to orders</button>
+  ${popupReview}
+  `;
   }
   const backBtnMobile = document.querySelector('.account-sidebar-btn.detail');
   const accountBtn = document.querySelector('.account-sidebar-btn.orders')
   const backBtn = document.querySelector('[data-view=order-details] .back-btn');
-
-
 
   ordersTbody.addEventListener('click', (e) => {
     const tr = e.target.closest('tr.order-item').dataset.id;
@@ -335,6 +396,59 @@ document.addEventListener('submit', (e) => {
     switchSection('orders');
     accountBtn.classList.remove('is-hidden');
     backBtnMobile.classList.add('is-hidden');
+  });
+
+  detailsSection.addEventListener('click', (e) => {
+    const popupReview = detailsSection.querySelector('.review-popup');
+    const overlayReview = detailsSection.querySelector('.popup-overlay-js.review');
+    const successReview = detailsSection.querySelector('.review-success-popup');
+
+    if (e.target.closest('.write-review-btn')) {
+      overlayReview.classList.add('is-active');
+      popupReview.classList.remove('is-hidden');
+    }
+
+    if (e.target.closest('.review-popup-close') || 
+    e.target == overlayReview || 
+    e.target.closest('.success-ok')) {
+      overlayReview.classList.remove('is-active');
+      popupReview.classList.add('is-hidden');
+      successReview.classList.add('is-hidden');
+    }
+
+    if (e.target.closest('.review-submit')) {
+      const picked = popupReview.querySelectorAll('.review-stars .star.is-active').length;
+      if (picked === 0) return;
+      successReview.classList.remove('is-hidden');
+      popupReview.classList.add('is-hidden');
+    }
+  });
+
+  const textLabels = [
+    'Very dissatisfied','Dissatisfied',"It's normal",'Satisfied','Very satisfied'
+  ];
+  const textHolders = [
+    'Please share why this product is not good',
+    "Please share why you don't like this product",
+    "Please share why you don't really like this product",
+    'Please share why you like this product',
+    'Please share why you love this product'
+  ];
+
+  detailsSection.addEventListener('click', (e) => {
+    const star = e.target.closest('.review-stars .star');
+    if (!star) return;
+
+    const n = Number(star.dataset.value);
+    const root = star.closest('.review-popup');
+
+    const reviewLabel = root.querySelector('.review-label');
+    const reviewHolder = root.querySelector('.review-text');
+    const stars = root.querySelectorAll('.review-stars .star');
+
+    reviewLabel.textContent = textLabels[n - 1];
+    reviewHolder.placeholder = textHolders[n - 1];
+    stars.forEach((s, i) => s.classList.toggle('is-active', i < n));
   });
 
 }

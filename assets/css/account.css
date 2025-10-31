@@ -386,6 +386,147 @@ button.page.active {
 .col-product-mobile {
   display: none;
 }
+.popup-overlay-js.review.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+.review-success-popup,
+.review-popup {
+  position: fixed;
+  max-width: 544px;
+  width: 100%;
+  z-index: 8000;
+  background: var(--neutral-white);
+  border-radius: 16px;
+  top: 88px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.review-popup-header {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-popup-header span {
+  font: var(--text-medium);
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+}
+.review-popup-close {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.review-popup-content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+}
+.orders-info {
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  flex-direction: column;
+}
+.item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.orders-info img {
+  width: 56px;
+  height: auto;
+}
+.orders-info .name {
+  font: var(--text-small);
+  font-weight: 600;
+}
+.review-label {
+  font: var(--text-medium);
+  font-weight: 600;
+  text-align: center;
+}
+.review-stars {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 8px;
+}
+.review-stars .star {
+  background: none;
+  border: none;
+}
+.star {
+  padding: 0;
+}
+.star .star-filled {
+  display: none;
+}
+.star.is-active .star-outline {
+  display: none;
+}
+.star.is-active .star-filled {
+  display: block;
+}
+textarea {
+  max-width: 100%;
+  min-height: 120px;
+  border: 1px solid var(--neutral-medium);
+  padding: 14px;
+  border-radius: 8px;
+  resize: none;
+  margin: 8px 0;
+}
+.review-text {
+  font: var(--text-small);
+  color: var(--neutral-medium);
+}
+.btn-primary.review-submit {
+  max-width: 224px;
+  align-items: center;
+  margin: auto;
+}
+.success-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--neutral-extra-dark);
+  justify-content: center;
+  text-align: center;
+}
+.success-close {
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+.success-icon {
+  height: 96px;
+  margin-top: 64px;
+  margin-bottom: 16px;
+}
+.success-title {
+  margin: 16px;
+}
+.success-desc {
+  margin: 0 40px;
+  display: flex;
+  justify-content: center;
+}
+.success-ok {
+  max-width: 160px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .account-container {
