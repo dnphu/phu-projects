@@ -5,8 +5,8 @@
   --yellow: #fcde4e;
   --green:  #004b23;
 
-  --neutral-black: rgba(0, 0, 0, 1);
-  --neutral-extra-dark:rgba(34, 36, 40, 1);
+  --neutral-black: rgb(0, 0, 0);
+  --neutral-extra-dark:rgb(34, 36, 40);
   --neutral-dark:#4b4b4b;
   --neutral-medium:#888888;
   --neutral-light:rgba(236, 236, 236, 1);

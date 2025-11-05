@@ -1,12 +1,15 @@
 
 document.addEventListener('click', (e) => {
   const row = e.target.closest('.acc-row');
+  if (!row) return;
 
   if (e.target.classList.contains('btn-edit')) {
     const form = row.querySelector('.edit');
     const rowEdit  = row.querySelector('.row-edit');
+    const line = row.querySelector('.line')
     form.classList.toggle('is-hidden');
     rowEdit.classList.toggle('is-hidden');
+      line.classList.add('is-hidden');
   }
 
   if (e.target.classList.contains('cancel-btn')) {
@@ -24,10 +27,9 @@ document.addEventListener('submit', (e) => {
   if (!form.checkValidity()) return; 
   e.preventDefault();
 
-  const row   = form.closest('.acc-row');
-  const text  = row.querySelector('.text');
+  const row = form.closest('.acc-row');
+  const text = row.querySelector('.text');
   const field = row.dataset.field;
-
 
   if (field === 'name') {
     const first = form.querySelector('.first-input').value.trim();
@@ -46,7 +48,7 @@ document.addEventListener('submit', (e) => {
   form.classList.add('is-hidden');
 });
 
-{
+
   const sidebar = document.querySelector('.account-sidebar');
   const container = document.querySelector('.account-container');
   const titleSpan = document.querySelector('.account-sidebar-btn.orders span');
@@ -451,4 +453,125 @@ document.addEventListener('submit', (e) => {
     stars.forEach((s, i) => s.classList.toggle('is-active', i < n));
   });
 
-}
+  {
+    document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.add-address-btn');
+    if (!btn) return;
+    switchSection('add-address');
+  });
+  
+    const formViewAddress = document.querySelector('[data-view="add-address"]');
+    const addressView = document.querySelector('[data-view="addresses"]');
+    
+    const form = formViewAddress.querySelector('.add-address-form-js');
+    const card = addressView.querySelector('.address-card-js');
+    const btnAddView = addressView.querySelector('.ship-address');
+    const formLabel = formViewAddress.querySelector('.form-label');
+    const removeBtn = formViewAddress.querySelector('.form-btn .remove');
+
+    const nameEl = card.querySelector('.js-name');
+    const addressEl = card.querySelector('.js-address');
+    const phoneEl = card.querySelector('.js-phone');
+
+    let isEditing = false;
+
+    const fullAddress = (street, ward, district, city) => 
+      [street, ward, district, city].filter(Boolean).join(', ')
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const fullName = form.querySelector('[name="fullName"]').value.trim();
+      const phone = form.querySelector('[name="phone"]').value.trim();
+      const city = form.querySelector('[name="city"]').value.trim();
+      const district = form.querySelector('[name="district"]').value.trim();
+      const ward = form.querySelector('[name="ward"]').value.trim();
+      const street = form.querySelector('[name="street"]').value.trim();
+      
+      nameEl.textContent = fullName.toUpperCase();
+      addressEl.textContent = fullAddress(street, ward, district, city);
+      phoneEl.textContent = phone;
+
+      card.classList.remove('is-hidden');
+      form.classList.add('is-hidden');
+      btnAddView.classList.add('is-hidden');
+      isEditing = false; 
+      switchSection('addresses');
+    });
+
+    const cancelBtn = form.querySelector('.cancel-btn');
+    cancelBtn.addEventListener('click', () => {
+      if(!isEditing) {
+        form.reset();
+        card.classList.add('is-hidden');
+        switchSection('addresses');
+      }
+      else {
+        card.classList.remove('is-hidden');
+        form.classList.add('is-hidden');
+        switchSection('addresses');
+      }
+    });
+
+    const editAddress = addressView.querySelector('.edit-address-btn');
+    editAddress.addEventListener('click', () => {
+      if (!editAddress) return; 
+      isEditing = true;
+      card.classList.add('is-hidden');
+      form.classList.remove('is-hidden');
+      formLabel.textContent = "Edit Address";
+      removeBtn.classList.remove('is-hidden');
+      switchSection('add-address');
+    });
+
+    removeBtn.addEventListener('click', () => {
+      isEditing = false; 
+      form.reset();
+      card.classList.add('is-hidden');
+      btnAddView.classList.remove('is-hidden');
+      switchSection('addresses');
+    });
+  }
+  {
+    document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.add-card-btn');
+    if (!btn) return;
+    switchSection('add-payments');
+    })
+  
+    const paymentsView = document.querySelector('[data-view="payments"]');
+    const formViewCard = document.querySelector('[data-view="add-payments"]');
+
+    const form = formViewCard.querySelector('.add-card-form-js');
+    const card = paymentsView.querySelector('.credit-card-js');
+    const removeBtn = card.querySelector('.remove')
+    
+    const numEl = card.querySelector('.js-number-card');
+    const dateEl = card.querySelector('.js-date-card');
+    const cvvEl = card.querySelector('.js-cvv-card');
+
+    const btnAddView = paymentsView.querySelector('.credit-card');
+    
+    form.addEventListener('submit', (e)=> { 
+      e.preventDefault();
+
+      const cardNumber = form.querySelector('[name="cardNumber"]').value.trim();
+      const date = form.querySelector('[name="date"]').value.trim();
+      const cvv = form.querySelector('[name="cvv"]').value.trim();
+
+      numEl.textContent = cardNumber;
+      dateEl.textContent = date;
+      cvvEl.textContent = cvv;
+      switchSection('payments');
+      btnAddView.classList.add('is-hidden');
+      card.classList.remove('is-hidden');
+    })
+    
+    removeBtn.addEventListener('click', () => {
+      form.reset();
+      switchSection('payments');
+      card.classList.add('is-hidden');
+      btnAddView.classList.remove('is-hidden');
+    })
+  }
+

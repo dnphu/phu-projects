@@ -168,7 +168,7 @@
   margin-top: 24px;
   gap: 16px;
 }
-.signup-field,
+.field-form,
 .login-field {
   width: 100%;
   height: 48px;
@@ -176,16 +176,16 @@
   border: 1px solid var(--neutral-medium); 
   padding: 14px;
   font: var(--text-small);
-  padding-top: 30px;
+  align-items: center;
 }
 .field {
   position: relative;
 }
 .labelline {
   position: absolute;
-  height: 48px;
-  top: 16px;
-  left: 16px;
+  height: auto;
+  top: 14px;
+  left: 14px;
   color: var(--neutral-medium);
   pointer-events: none;
   transition: 0.2s;
@@ -194,6 +194,10 @@
 .field input:not(:placeholder-shown) + .labelline {
   top: 6px;
   font: var(--text-xsmall);
+}
+.field input:focus,
+.field input:not(:placeholder-shown) {
+  padding-top: 30px;
 }
 .password-wrapper {
   margin-bottom: 10px;
@@ -292,7 +296,7 @@
 .signup-name .field { 
   flex:1; 
 }
-.signup-birthday .signup-field {
+.signup-birthday .field-form {
   width: 100%;
   border-radius: 8px;
   padding: 14px;
@@ -315,7 +319,7 @@ input:focus {
 }
 select:invalid {
   font: var(--text-small);
-  color: var(--neutral-medium);
+
 }
 .signup-note {
   font: var(--text-xsmall);

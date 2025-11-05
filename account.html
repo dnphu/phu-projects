@@ -77,32 +77,32 @@
                         <form class="signup-info">
                             <div class="signup-name">
                                 <div class="field">
-                                    <input class="signup-field" type="text" placeholder="" required>
+                                    <input class="field-form" type="text" placeholder="" required>
                                     <div class="labelline">First Name*</div>
                                 </div>
                                 <div class="field">
-                                    <input class="signup-field" type="text" placeholder="" required>
+                                    <input class="field-form" type="text" placeholder="" required>
                                     <div class="labelline">Last Name*</div>
                                 </div>
                             </div>
                             <div class="field">
-                                <input class="signup-field" type="email" placeholder="" required>
+                                <input class="field-form" type="email" placeholder="" required>
                                 <div class="labelline">Email address</div>
                             </div>
                             <div class="field">
-                                <input class="signup-field" type="password" minlength="6" maxlength="12"  placeholder="" required>
+                                <input class="field-form" type="password" minlength="6" maxlength="12"  placeholder="" required>
                                 <div class="labelline">Password (6 to 12 characters)</div>
                             </div>
                             <div class="field">
-                                <input class="signup-field" type="tel" placeholder="">
+                                <input class="field-form" type="tel" placeholder="">
                                 <div class="labelline">Phone number(optional)</div>
                             </div>
                             <div class="signup-content">Enter your birthdate to receive a free gift every year.</div>
                             <div class="signup-birthday">
-                                <select class="signup-field" id="day" required>
+                                <select class="field-form" id="day" required>
                                     <option value="" selected hidden>Day</option>
                                 </select>
-                                <select class="signup-field" id="month" required>
+                                <select class="field-form" id="month" required>
                                     <option value="" selected hidden>Month</option>
                                 </select>
                             </div>
@@ -184,11 +184,11 @@
                     <form class="edit login-form is-hidden">
                         <div class="form-edit">
                             <div class="field">
-                                <input class="signup-field first-input" type="text" placeholder="" required>
+                                <input class="field-form first-input" type="text" placeholder="" required>
                                 <div class="labelline">First Name</div>
                             </div>
                             <div class="field">
-                                <input class="signup-field last-input" type="text" placeholder="" required>
+                                <input class="field-form last-input" type="text" placeholder="" required>
                                 <div class="labelline">Last Name</div>
                         </div>
                         </div>
@@ -198,7 +198,7 @@
                         </div>
                         <hr class="sep">
                     </form>
-                <hr class="line">
+                    <hr class="line">
                 </div>
 
                 <div class="acc-row" data-field="email">
@@ -212,7 +212,7 @@
 
                     <form class="edit login-form is-hidden">
                         <div class="field">
-                            <input class="signup-field email-input" type="email" placeholder="" required>
+                            <input class="field-form email-input" type="email" placeholder="" required>
                             <div class="labelline">Email address</div>
                         </div>
                         <div class="row-actions">
@@ -235,7 +235,7 @@
 
                     <form class="edit login-form is-hidden">
                         <div class="field">
-                            <input class="signup-field password-input" type="password" minlength="6" maxlength="12"  placeholder="" required>
+                            <input class="field-form password-input" type="password" minlength="6" maxlength="12"  placeholder="" required>
                             <div class="labelline">Password (6 to 12 characters)</div>
                         </div>
                         <div class="row-actions">
@@ -409,19 +409,120 @@
         </section>
 
         <section class="account-content is-hidden" data-view="addresses">
-            <div class="popup-overlay-js is-active review"></div>
-            <div class="review-success-popup">
-            <div class="success-inner">
-                <button class="success-close">
-                <img src="assets/icons/Shop/x.svg" alt="Close">
-                </button>
-                <img class="success-icon" src="assets/icons/Account/Happy star.png" alt="">
-                <h6 class="success-title">Thank you for your review!</h6>
-                <p class="success-desc">
-                    We will notify you once your reviews is verified. Your review help people having a better shopping experience.
-                </p>
-                <button class="btn-primary success-ok">OK</button>
+            <div class="content">
+                <h6>Saved Addresses</h6>
+                <hr class="sep">
+                <div class="ship-address">
+                    <span>This address will be used when you order.</span>
+                    <button class="btn-primary add-address-btn">Add Shipping Address</button>
+                </div>
+
+                <div class="address-card-js is-hidden">
+                    <div class="saved-address">
+                        <div class="js-name"></div>
+                        <div class="your-address">
+                            <span class="label">Address:</span>
+                            <span class="js-address"></span>
+                        </div>
+                        <div class="your-phone">
+                            <span class="label">Phone number:</span>
+                            <span class="js-phone"></span>
+                        </div>
+                        <span class="address-status">Default address</span>
+                    </div>
+                    <button class="btn-edit edit-address-btn" type="button">Edit</button>
+                </div>
             </div>
+        </section>
+        <section class="account-content is-hidden" data-view="add-address">
+            <div class="content">
+                <h6>Saved Addresses</h6>
+                <hr class="sep">
+
+                <form class="add-address-form-js">
+                    <span class="form-label">Add Shipping Address</span>
+                    <div class="field">
+                        <input class="field-form" type="text" name="fullName" placeholder="" required>
+                        <div class="labelline">Full Name*</div>
+                    </div>
+                    <div class="field">
+                        <input class="field-form" type="tel" name="phone" placeholder="">
+                        <div class="labelline">Phone number*</div>
+                    </div>
+                    <select class="field-form" name="city">
+                        <option value="" selected hidden>City</option>
+                    </select>
+                    <select class="field-form" name="district">
+                        <option value="" selected hidden>District</option>
+                    </select>
+                    <select class="field-form" name="ward">
+                        <option value="" selected hidden>Ward</option>
+                    </select>
+                    <div class="field">
+                        <input class="field-form" type="text" name="street" placeholder="" required>
+                        <div class="labelline">Street Address*</div>
+                    </div>
+                    <div class="form-btn">
+                        <div class="row-actions">
+                            <button type="button" class="btn-outline cancel-btn">Cancel</button>
+                            <button type="submit" class="btn-primary save-btn">Save</button>
+                        </div>
+                        <button type="button" class="btn-link remove is-hidden">Remove address</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <section class="account-content is-hidden" data-view="payments">
+            <div class="content">
+                <h6>Payment Methods</h6>
+                <hr class="sep">
+                <div class="credit-card">
+                    <span>You don’t have any cradit card yet.</span>
+                    <button class="btn-primary add-card-btn">Add Credit Card</button>
+                </div>
+
+                <div class="credit-card-js is-hidden">
+                    <div class="saved-card">
+                        <div class="card-number">
+                            <span class="label">Card Number:</span>
+                            <span class="js-number-card"></span>
+                        </div>
+                        <div class="card-date">
+                            <span class="label">Date:</span>
+                            <span class="js-date-card"></span>
+                        </div>
+                        <div class="card-cvv">
+                            <span class="label">CVV:</span>
+                            <span class="js-cvv-card"></span>
+                        </div>
+                        <span class="card-status">Default card</span>
+                    </div>
+                    <button type="button" class="btn-link remove">Remove address</button>                </div>
+            </div>
+        </section>
+        <section class="account-content is-hidden" data-view="add-payments">
+            <div class="content">
+                <h6>Payment Methods</h6>
+                <hr class="sep">
+                <form class="add-card-form-js">
+                    <span class="form-label">Add Credit Card</span>
+                    <div class="field">
+                        <input class="field-form" type="text" name="cardNumber" placeholder="" required>
+                        <div class="labelline">Card Number *</div>
+                    </div>
+                    <div class="card-info">
+                        <div class="field">
+                            <input class="field-form" type="tel" name="date" placeholder="">
+                            <div class="labelline">Expiry Date * (MM/YY)</div>
+                        </div>
+                        <div class="field">
+                            <input class="field-form" type="tel" name="cvv" placeholder="">
+                            <div class="labelline">CVV</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary add-method-btn">Add Payment Method</button>
+                </form>
             </div>
         </section>
         <section class="account-content is-hidden" data-view="">

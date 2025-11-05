@@ -60,6 +60,9 @@ main {
   padding: 0 24px;
   padding-top: 24px;
 }
+.acc-row .label{
+  font-weight: 600;
+}
 .row-head.mobile {
   display: none;
 }
@@ -95,7 +98,7 @@ main {
   font-weight: 600;
 }
 .edit {
-  width: 100%;
+  width: fit-content;
   margin: 0;
   padding: 0;
   margin-top: 24px;
@@ -484,7 +487,7 @@ textarea {
 }
 .review-text {
   font: var(--text-small);
-  color: var(--neutral-medium);
+  
 }
 .btn-primary.review-submit {
   max-width: 224px;
@@ -525,6 +528,81 @@ textarea {
   max-width: 160px;
   margin-top: 32px;
   margin-bottom: 24px;
+}
+.credit-card,
+.ship-address {
+  margin: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.credit-card button,
+.ship-address button {
+  width: fit-content;
+  padding: 8px 30px;
+}
+.add-card-form-js,
+.add-address-form-js {
+  margin: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.card-info {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
+.card-info .field{
+  flex: 1 1 0;          
+  min-width: 0;          
+}
+.form-label {
+  font-weight: 600;
+}
+.add-address-form-js .row-actions button {
+  margin: 0;
+}
+.credit-card-js,
+.address-card-js {
+  margin: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.add-method-btn {
+  width: fit-content;
+  padding: 8px 32px;
+}
+.edit-address-btn {
+  height: fit-content;
+  padding: 0;
+}
+.saved-card .js-number-card,
+.saved-card .js-date-card,
+.saved-card .js-cvv-card,
+.saved-address .js-address,
+.saved-address .js-phone,
+.saved-address .js-name {
+  font-weight: 600;
+}
+.card-status,
+.address-status {
+  color: var(--green);
+  font-weight: 600;
+}
+.form-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.form-btn .row-actions {
+  width: 100%;
+}
+.btn-link.remove {
+  white-space: nowrap;
+  background: none;
+  border: none;
+  padding: 0;
+  height: fit-content;
 }
 
 
