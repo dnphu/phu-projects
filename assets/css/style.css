@@ -354,6 +354,7 @@ form.submitted select:invalid  {
   list-style: none;
   margin: 0 auto;
   white-space: nowrap;
+  position: relative;
 }
 .header-nav .nav-list a {
   display: inline-flex;
@@ -363,6 +364,101 @@ form.submitted select:invalid  {
   font-weight: 400;
   text-decoration: none;
   position: relative;
+}
+.is-hidden {
+  display: none;
+} 
+.has-sub {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.has-sub .chev {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; 
+}
+.has-sub:hover .chev  {
+  opacity: 1; 
+  visibility: visible;
+}
+.has-sub .dropdown {
+  position: absolute;
+  background: var(--neutral-white);
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  top: 64px;
+  z-index: 3000;
+  max-width: 1440px;
+  width: 100vw;
+}
+.has-sub:hover .dropdown {
+  opacity: 1; 
+  visibility: visible;
+}
+.dropdown.mega {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 160px;
+}
+.mega-cats {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 12px;
+}
+.mega-cats li {
+  list-style: none;
+}
+.mega-cats li a:hover {
+  text-decoration: underline;
+}
+.mega-cats li a {
+  font: var(--text-small);
+  color: var(--neutral-black) !important;
+  font-weight: 600 !important;
+}
+.mega-banners {
+  display: flex;
+  gap: 32px;
+}
+.mega-banners img {
+  height: 208px;
+  margin: 0;
+}
+.mega-col {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-width: 190px;
+}
+.mega-box > div,
+.mega-col > div { 
+  font: var(--text-small);
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+.mega-col ul {
+  padding: 0;
+  list-style: none;
+}
+.mega-col li {
+  padding-bottom: 12px;
+}
+.mega-col li a {
+  color: var(--neutral-black) !important;
+}
+.mega-col li a:hover {
+  text-decoration: underline;
+}
+.mega-left {
+  display: flex;
+  flex-direction: row;
+  gap: 40px
 }
 .promo-banner {
   background-color: var(--red);
@@ -920,6 +1016,9 @@ body.modal-open {
     background: rgba(255,255,255,.55);
     border-radius: 4px;
   }
+  .has-sub {
+    height: fit-content;
+  }
   .header-nav .nav-list a {
     display: flex;
     align-items: center;
@@ -1202,6 +1301,9 @@ body.modal-open {
     display: flex;
     justify-content: flex-start;
     padding: 0 16px;
+  }
+  .has-sub {
+    height: fit-content;
   }
   .header-nav .nav-list::-webkit-scrollbar {
     display: none;        
