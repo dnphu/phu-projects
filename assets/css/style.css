@@ -1003,7 +1003,8 @@ body.modal-open {
     display: flex;
     justify-content: flex-start;
     padding: 0 16px 6px;      
-    gap: 18px;                   
+    gap: 18px;
+    overflow-y: hidden;                   
   }
   .header-nav .nav-list::-webkit-scrollbar {
     display: block;    
@@ -1301,6 +1302,7 @@ body.modal-open {
     display: flex;
     justify-content: flex-start;
     padding: 0 16px;
+    overflow-y: hidden;
   }
   .has-sub {
     height: fit-content;

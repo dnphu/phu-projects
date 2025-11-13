@@ -11,10 +11,10 @@
 
 </head>
 <body>
-    <header class="header">
+<header class="header">
         <div class="container-header header-bar">
             <div class="logo">
-                <a href="/index.html"><img src="assets/icons/Logo.png" alt="Beautizon"></a>
+                <a href="index.html"><img src="assets/icons/Logo.png" alt="Beautizon"></a>
             </div>
             <form class="search-field">
                 <input id ="search" type="search" placeholder="search">
@@ -61,13 +61,13 @@
                         <ul>
                             <li><a href="">Recent orders</a></li>
                             <li><a href="">My Loves</a></li>
-                            <li><a href="">Account Settings</a></li>
+                            <li><a href="account.html">Account Settings</a></li>
                             <li><a href="">My Reviews</a></li>
                             <li><a id="doLogout">Log out</a></li>                            
                         </ul>
                     </div>
 
-                    <div class="signup-popup-js">
+                    <div class="signup-popup-js">      
                         <div class="signup-header">
                             <span>Create an Account</span>
                             <button class="signup-close-js"><img src="assets/icons/Shop/x.svg" alt="Close"></button>
@@ -114,7 +114,7 @@
                             and to automatically receive Beautizon offers and notifications via email.
                             <br><br> 
                             Beautizon uses Google ReCaptcha and by registering, users are subject to Google’s 
-                             <span class="highlight-red">privacy policy<k /span>
+                             <span class="highlight-red">privacy policy</span>
                              & 
                              <span class="highlight-red">terms</span>.
                         </p>
@@ -130,16 +130,307 @@
     </header>
     <nav class="header-nav">
         <ul class="nav-list">
-            <li><a href="#">Sản phẩm mới</a></li>
-            <li><a href="#">Thương hiệu</a></li>
-            <li><a href="#">Son môi</a></li>
-            <li><a href="#">Chăm sóc da</a></li>
-            <li><a href="#">Dành cho nam</a></li>
-            <li><a href="#">Chăm sóc tóc</a></li>
-            <li><a href="#">Toàn thân</a></li>
-            <li><a href="#">Sản phẩm tre</a></li>
-            <li><a href="#">Bộ sưu tập Beautizon</a></li>
-            <li><a href="#">Giảm giá & Khuyến mãi</a></li>
+            <li class="has-sub">
+                <a href="#" class="nav-link">Sản phẩm mới
+                    <img class="chev" src="assets/icons/pointer.svg">    
+                </a>
+                <div class="dropdown mega">
+                    <ul class="mega-cats">
+                        <li><a href="#">New makeup</a></li>
+                        <li><a href="#">New skincare</a></li>
+                        <li><a href="#">New hair</a></li>
+                    </ul>
+
+                    <div class="mega-banners">
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="has-sub">
+                <a href="#" class="nav-link">Thương hiệu
+                    <img class="chev" src="assets/icons/pointer.svg">    
+                </a>
+                <div class="dropdown mega">
+                    <ul class="mega-cats">
+                        <li><a href="#">Antipodes</a></li>
+                        <li><a href="#">Sukin</a></li>
+                        <li><a href="#">Natio</a></li>
+                        <li><a href="#">Andalou</a></li>
+                        <li><a href="#">Vitaman</a></li>
+                    </ul>
+
+                    <div class="mega-banners">
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="has-sub">
+                <a href="#" class="nav-link">Son môi
+                
+                </a>
+            </li>
+            <li class="has-sub"> 
+                <a href="#" class="nav-link">Chăm sóc da
+                    <img class="chev" src="assets/icons/pointer.svg">
+                </a>
+                <div class="dropdown mega">
+                    <div class="mega-col">
+                        <div>Shop by concerns</div>
+                        <ul>
+                            <li><a href="#">Acne & Blemishes</a></li>
+                            <li><a href="#">Anti-Aging</a></li>
+                            <li><a href="#">Dark Spots</a></li>
+                            <li><a href="#">Pores</a></li>
+                            <li><a href="#">Dryness</a></li>
+                            <li><a href="#">Fine Lines & Wrinkles</a></li>
+                            <li><a href="#">Dullness/Uneven Texture</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mega-col">
+                        <div>Moisturizers</div>
+                        <ul>
+                            <li><a href="#">Night Creams</a></li>
+                            <li><a href="#">Face Oils</a></li>
+                            <li><a href="#">Mists & Essences</a></li>
+                            <li><a href="#">BB & CC Creams</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mega-col">
+                        <div>Cleansers</div>
+                        <ul>
+                            <li><a href="#">Face Wash & Cleansers</a></li>
+                            <li><a href="#">Exfoliators</a></li>
+                            <li><a href="#">Makeup Removers</a></li>
+                            <li><a href="#">Face Wipes</a></li>
+                            <li><a href="#">Toners</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mega-col">
+                        <div class="mega-box">
+                            <div>Treatments</div>
+                            <ul>
+                                <li><a href="#">Face Serums</a></li>
+                                <li><a href="#">Blemish & Acne Treatments</a></li>
+                                <li><a href="#">Facial Peels</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-box">
+                            <div>Eye Care</div>
+                            <ul>
+                                <li><a href="#">Eye Creams & Treatments</a></li>
+                                <li><a href="#">Eye Masks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mega-col">
+                        <div>Masks</div>
+                        <ul>
+                            <li><a href="#">Face Masks</a></li>
+                            <li><a href="#">Sheet Masks</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="has-sub">
+                <a href="#" class="nav-link">Dành cho nam
+                    <img class="chev" src="assets/icons/pointer.svg">
+                </a>
+                <div class="dropdown mega">
+                    <ul class="mega-cats">
+                        <li><a href="#">Cleanser</a></li>
+                        <li><a href="#">Moisturiser</a></li>
+                        <li><a href="#">Shaving Gel</a></li>
+                        <li><a href="#">Shampoo Conditioner</a></li>
+                        <li><a href="#">Scrubs</a></li>
+                        <li><a href="#">Masks</a></li>
+                    </ul>
+
+                    <div class="mega-banners">
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="has-sub">
+                <a href="#" class="nav-link">Chăm sóc tóc
+                    <img class="chev" src="assets/icons/pointer.svg">
+                </a>
+                <div class="dropdown mega">
+                    <div class="mega-left">
+                        <div class="mega-col">
+                            <div>Shop by concerns</div>
+                            <ul>
+                                <li><a href="#">Damaged Hair</a></li>
+                                <li><a href="#">Dryness</a></li>
+                                <li><a href="#">Frizz</a></li>
+                                <li><a href="#">Scalp Care</a></li>
+                                <li><a href="#">Volume</a></li>
+                                <li><a href="#">Fine Color Care & Wrinkles</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-col">
+                            <div>Shampoo & Conditioner</div>
+                            <ul>
+                                <li><a href="#">Shampoo</a></li>
+                                <li><a href="#">Conditioner</a></li>
+                                <li><a href="#">Scalp Scrub</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mega-banners">
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="has-sub">
+                <a href="#" class="nav-link">Toàn thân
+                    <img class="chev" src="assets/icons/pointer.svg">
+                </a>
+                <div class="dropdown mega">
+                    <div class="mega-left">
+                        <div class="mega-col">
+                            <div>Bath & Shower</div>
+                            <ul>
+                                <li><a href="#">Body Wash & Shower Gel</a></li>
+                                <li><a href="#">Scrub & Exfoliants</a></li>
+                                <li><a href="#">Hand Sanitizer & Hand Soap</a></li>
+                                <li><a href="#">Body Moisturizers</a></li>
+                                <li><a href="#">Body Lotions & Body Oils</a></li>
+                                <li><a href="#">Hand Cream & Foot Cream</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-col">
+                            <div>Skin types</div>
+                            <ul>
+                                <li><a href="#">Oily skin</a></li>
+                                <li><a href="#">Dry Skin</a></li>
+                                <li><a href="#">Combination skin</a></li>
+                                <li><a href="#">Normal skin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mega-banners">
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="has-sub">
+                <a href="#" class="nav-link">Sản phẩm tre
+                    <img class="chev" src="assets/icons/pointer.svg">
+                </a>
+                <div class="dropdown mega">
+                    <div class="mega-left">
+                        <div class="mega-col">
+                            <div>Bath & Shower</div>
+                            <ul>
+                                <li><a href="#">Body Wash & Shower Gel</a></li>
+                                <li><a href="#">Scrub & Exfoliants</a></li>
+                                <li><a href="#">Hand Sanitizer & Hand Soap</a></li>
+                                <li><a href="#">Body Moisturizers</a></li>
+                                <li><a href="#">Body Lotions & Body Oils</a></li>
+                                <li><a href="#">Hand Cream & Foot Cream</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-col">
+                            <div>Skin types</div>
+                            <ul>
+                                <li><a href="#">Oily skin</a></li>
+                                <li><a href="#">Dry Skin</a></li>
+                                <li><a href="#">Combination skin</a></li>
+                                <li><a href="#">Normal skin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mega-banners">
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="has-sub"> 
+                <a href="#" class="nav-link">Bộ sưu tập Beautizon
+                    <img class="chev" src="assets/icons/pointer.svg">
+                </a>
+                <div class="dropdown mega">
+                    <div class="mega-left">
+                        <div class="mega-col">
+                            <div>Bath & Shower</div>
+                            <ul>
+                                <li><a href="#">Body Wash & Shower Gel</a></li>
+                                <li><a href="#">Scrub & Exfoliants</a></li>
+                                <li><a href="#">Hand Sanitizer & Hand Soap</a></li>
+                                <li><a href="#">Body Moisturizers</a></li>
+                                <li><a href="#">Body Lotions & Body Oils</a></li>
+                                <li><a href="#">Hand Cream & Foot Cream</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-col">
+                            <div>Skin types</div>
+                            <ul>
+                                <li><a href="#">Oily skin</a></li>
+                                <li><a href="#">Dry Skin</a></li>
+                                <li><a href="#">Combination skin</a></li>
+                                <li><a href="#">Normal skin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mega-banners">
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="has-sub">
+                <a href="#" class="nav-link">Giảm giá & Khuyến mãi
+                    <img class="chev" src="assets/icons/pointer.svg">
+                </a>
+                <div class="dropdown mega">
+                    <div class="mega-left">
+                        <div class="mega-col">
+                            <div>Bath & Shower</div>
+                            <ul>
+                                <li><a href="#">Body Wash & Shower Gel</a></li>
+                                <li><a href="#">Scrub & Exfoliants</a></li>
+                                <li><a href="#">Hand Sanitizer & Hand Soap</a></li>
+                                <li><a href="#">Body Moisturizers</a></li>
+                                <li><a href="#">Body Lotions & Body Oils</a></li>
+                                <li><a href="#">Hand Cream & Foot Cream</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-col">
+                            <div>Skin types</div>
+                            <ul>
+                                <li><a href="#">Oily skin</a></li>
+                                <li><a href="#">Dry Skin</a></li>
+                                <li><a href="#">Combination skin</a></li>
+                                <li><a href="#">Normal skin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mega-banners">
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                        <a class="banner-card" href="#"><img src="assets/icons/banner.png" alt="Related Banner"></a>
+                    </div>
+                </div>
+            </li>
         </ul>
     </nav>
     <div class="promo-banner">
